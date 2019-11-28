@@ -8,3 +8,26 @@
 ### 老师：
 1. 群组创建：创建班级群，可以查看被加入班级群的学生的成绩，信息等。
 2. 数据分析：统计班级成绩，进行数据分析，可生成成绩报告单
+
+## model
+### 学生：
+#### 属性：
+- id(根据id登陆)
+- password
+- class(班级)
+- description(个人描述)
+- isAdmin
+- grade(成绩)    
+#### 方法：
+
+### 老师
+
+#### 属性：
+- id
+- password
+- description
+- class
+- isAdmin
+
+#### 方法
+
