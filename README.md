@@ -49,32 +49,29 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 
 2. 前端：用户注册请求：     
    服务端：     
-   后台：注册用户并写入数据库：bool registerUser(String username, String password) 注册成功则返回true，没有则返回false
+   后台：1. 注册用户并写入数据库：bool registerUser(String username, String password, int isAdmin) 注册成功则返回true，没有则返回false
 
 3. 前端：上传成绩信息请求：     
    服务端：       
-   后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false       
+   后台：1. 判断该用户是否是管理员：bool isAdmin(String username), 是则true，不是则false       
         2. 传入用户成绩信息：bool postGrade(String username, List<String> subjects, List<int> grades) subjects为科目，grades为成绩，科目与成绩的索引应保持一致，全部传入成功则返回true，没有则返回false
 
 4. 前端：查询某门课的成绩：       
    服务端：        
-   后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false
-        2. 查询成绩：int getGradeByUsernameAndId(String username, String subject) 查询到则返回该成绩，没有查询到则返回null
+   后台：
+        1. 查询成绩：int getGradeByUsernameAndSubject(String username, String subject) 查询到则返回该成绩，没有查询到则返回null
         
 5. 前端：修改某门课的成绩：     
    服务端：      
-   后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false       
+   后台：1. 判断该用户是否是管理员：bool isAdmin(String username), 是则true，不是则false       
         2. 修改成绩：bool modifyGradeByUsernameAndSubject(String username, String subject, int grade) 修改成功则true，修改失败则false。
 
 6. 前端：导出某用户的信息作为简历：    
    服务端：
-   后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false。      
-        2. 导出 File getProfileByUsername(String username) 导出成功则返回File本身，失败则返回null。
+   后台：      
+        1. 导出 File getProfileByUsername(String username) 导出成功则返回File本身，失败则返回null。
         
-7. 前端：导出某个用户的成绩分析表：     
-   服务端：     
-   后台：1. 判断用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false。
-        2. 导出 Graph getAnalysisByUsername(String username) 导出成功则返回Graph，失败则返回null。
+
         
    
 
