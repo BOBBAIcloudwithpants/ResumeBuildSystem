@@ -41,11 +41,11 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 
 #### 接口
 
+##### 学生
 1. 前端：用户登录请求：     
    服务端：     
    后台：1. 判断用户是否在数据库中的接口：bool findUserByName(String username) 在数据库中则返回true，没有则返回false     
         2. 用户登陆：bool userLogin(String username, String password) 登陆成功则返回true，失败则返回false
-   
 
 2. 前端：用户注册请求：     
    服务端：     
@@ -69,7 +69,14 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 6. 前端：导出某用户的信息作为简历：    
    服务端：
    后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false。      
-        2. 导出——还没写 File getProfileByUsername(String username) 导出成功则返回File本身，失败则返回null。
+        2. 导出 File getProfileByUsername(String username) 导出成功则返回File本身，失败则返回null。
+        
+7. 前端：导出某个用户的成绩分析表：     
+   服务端：     
+   后台：1. 判断用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false。
+        2. 导出 Graph getAnalysisByUsername(String username) 导出成功则返回null
+        
+   
 
 
 
