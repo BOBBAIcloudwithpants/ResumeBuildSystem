@@ -74,7 +74,7 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 7. 前端：导出某个用户的成绩分析表：     
    服务端：     
    后台：1. 判断用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false。
-        2. 导出 Graph getAnalysisByUsername(String username) 导出成功则返回null
+        2. 导出 Graph getAnalysisByUsername(String username) 导出成功则返回Graph，失败则返回null。
         
    
 
