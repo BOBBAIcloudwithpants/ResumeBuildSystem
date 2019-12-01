@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Mysql {
@@ -46,9 +47,19 @@ public class Mysql {
             Statement statement = mConnect.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
             if(resultSet.first()){
+                List<Integer> grades = new ArrayList<Integer>();
+                grades.add(resultSet.getInt("grade1"));
+                grades.add(resultSet.getInt("grade2"));
+                grades.add(resultSet.getInt("grade3"));
+                grades.add(resultSet.getInt("grade4"));
+                grades.add(resultSet.getInt("grade5"));
                 User user = new User(
                         resultSet.getString("username"),
-                        resultSet.getString("password")
+                        resultSet.getString("password"),
+                        resultSet.getInt("isAdmin"),
+                        resultSet.getString("description"),
+                        resultSet.getInt("groupID"),
+                        grades
                 );
                         return user;
             }
@@ -93,6 +104,7 @@ public class Mysql {
 
     public static void main(String[] args){
         Mysql mysql = new Mysql(MysqlManager.getConnection());
+
     }
 }
 
