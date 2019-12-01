@@ -39,5 +39,29 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 - class
 - isAdmin
 
-#### 方法
+#### 接口
+
+1. 前端：用户登录请求：
+   服务端：
+   后台：1. 判断用户是否在数据库中的接口：bool findUserByName(String username) 在数据库中则返回true，没有则返回false
+        2. 用户登陆：bool userLogin(String username, String password) 登陆成功则返回true，失败则返回false
+   
+
+2. 前端：用户注册请求：
+   服务端：
+   后台：注册用户并写入数据库：bool registerUser(String username, String password) 注册成功则返回true，没有则返回false
+
+3. 前端：上传成绩信息请求：
+   服务端：
+   后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false
+        2. 传入用户成绩信息：bool postGrade(String username, List<String> subjects, List<int> grades) subjects为科目，grades为成绩，科目与成绩的索引应保持一致，全部传入成功则返回true，没有则返回false
+
+4. 前端：查询某门课的成绩：
+   服务端：
+   后台：1. 判断该用户是否登陆：bool isLogin(String username), 已登陆则true，未登录则false
+        2. 查询成绩：int getGradeByUsernameAndId()
+
+
+
+
 
