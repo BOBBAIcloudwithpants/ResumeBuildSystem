@@ -3,6 +3,7 @@ package database;
 import model.Group;
 import model.User;
 
+import java.awt.desktop.SystemSleepEvent;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -19,18 +20,13 @@ public class Mysql {
         this.mConnect = connection;
     }
 
-    public boolean createTable (String sql) {
-        boolean result = false;
-
-        try {
-            Statement statement = mConnect.createStatement();
-            statement.execute(sql);
-            result = true;
-            statement.close();
-        } catch (SQLException e) {
-            System.err.println("创建表异常:" + e.getMessage());
+    public int findIndex(String username, List<User> users){
+        for(int i = 0;i<users.size();i++){
+            if(users.get(i).getUsername().equals(username)){
+                return i;
+            }
         }
-        return result;
+        return -1;
     }
 
 
@@ -128,7 +124,8 @@ public class Mysql {
         try{
             Statement sta = mConnect.createStatement();
             String temp = "grade"+id;
-            String sql = "update test.user set "+temp+"="+newGrade+" where username="+username+";";
+            String sql = "update test.user set "+temp+"="+newGrade+" where username=\""+username+"\";";
+            user.getGrades().set(id-1,newGrade);
             sta.executeUpdate(sql);
         } catch(SQLException e){
             e.printStackTrace();
@@ -173,6 +170,58 @@ public class Mysql {
 
     }
 
+    public boolean deleteUserInGroup(String username, int id){
+        User user = getUserById(username);
+        if(user == null){
+            return false;
+        }
+
+        Group group = getGroupById(id);
+        if(group == null){
+            return false;
+        }
+
+        if(user.getGroupID() != id){
+            return false;
+        }
+
+        int i = findIndex(username, group.getUsers())+1;
+        System.out.println(i);
+
+
+        try{
+        Statement sta = mConnect.createStatement();
+        while (i < group.getUsers().size()) {
+            int j = i+1;
+            String temp = "username" + j;
+
+            String sql = "select " + temp + " from `test`.`group` where id=" + id + ";";
+            ResultSet resultSet = sta.executeQuery(sql);
+            String target = "";
+            while (resultSet.next()) { // 更新username，并保证group中的每一条的username都相邻存放
+                target = resultSet.getString(temp);
+            }
+
+            String temp2 = "username" + i;
+            String sql2 = "update test.group set " + temp2 + "=\"" + target + "\" where id=" + id + ";";
+            sta.executeUpdate(sql2);
+            i++;
+
+        }
+            String temp = "username"+i;
+            String sql3 = "update test.group set "+temp+"=null where id="+id+";";
+            sta.executeUpdate(sql3);
+            group.getUsers().remove(findIndex(username, group.getUsers()));
+            user.setGroupID(-1);
+            String sql4 = "update test.user set groupID=-1 where username=\""+user.getUsername()+"\";";
+            sta.executeUpdate(sql4);
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+        return true;
+    }
+
     public Group getGroupById (int id) {
         String sql = "SELECT * FROM `test`.`group` WHERE id=" + id;
         Group groups = null;
@@ -187,6 +236,7 @@ public class Mysql {
                 for (int i = 1; i <= 10; i++) {
 
                     String username = resultSet.getString("username" + i);
+
                     if (username != null) {
                         users.add(getUserById(username));
                     }
@@ -206,8 +256,26 @@ public class Mysql {
 
         return groups;
     }
+    public void clearAllUserOfGroup(int id){
+        Group group = getGroupById(id);
 
+        group.getUsers().clear();
+
+
+        try{
+            Statement sta = mConnect.createStatement();
+            for(int i = 1;i<=10;i++){
+                String temp = "username"+i;
+                String sql = "update test.group set "+temp+"=null where id="+id+";";
+                sta.executeUpdate(sql);
+            }
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+
+    }
     public boolean appendUserIntoGroup (String username, int groupID) {
+        String u = "username";
         User user = getUserById(username);
         if (user == null) {
             return false; //g该用户不存在
@@ -224,40 +292,23 @@ public class Mysql {
 
         if (user.getGroupID() > 0) {
             Group group1 = getGroupById(user.getGroupID());
-            try {
-                int i = group1.getUsers().indexOf(user.getUsername()) + 1;
-                Statement sta = mConnect.createStatement();
-                while (i <= Group.MAX_CAPACITY) {
-                    String temp = "username" + i;
-                    String sql = "select " + temp + " from test.group where id=" + groupID + ";";
-                    ResultSet resultSet = sta.executeQuery(sql);
-                    String target = "";
-                    while (resultSet.next()) { // 更新username，并保证group中的每一条的username都相邻存放
-                        target = resultSet.getString(temp);
-                    }
 
-                    int j = i - 1;
-                    String temp2 = "username" + j;
-                    String sql2 = "update test.group set " + temp2 + "=" + target + " where id=" + groupID + ";";
-                    sta.executeUpdate(sql2);
-
-                }
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
             group1.getUsers().remove(getUserById(username));
         }
 
         user.setGroupID(groupID);
         try {
-            String sql = "update test.user set groupID=" + groupID + " where username=" + username + ";";
+            String sql = "update test.user set groupID=" + groupID + " where username=\"" + username + "\";";
             Statement sta = mConnect.createStatement();
             sta.executeUpdate(sql);
 
             int i = group.getUsers().size() + 1;
-            String temp = username + i;
+            String temp = u + i;
 
-            String sql2 = "update test.group set " + temp + "=" + username + "where id=" + groupID + ";";
+
+            String sql2 = "update test.group set " + temp + "=\"" + username + "\" where id=" + groupID + ";";
+            group.getUsers().add(user);
+
             sta.executeUpdate(sql2);
 
 
@@ -270,10 +321,16 @@ public class Mysql {
 
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        List<User> users = new ArrayList<>();
-        users.add(new User("bob", "12345", 1));
 
-        mysql.addUser(users);
+
+        Group group = mysql.getGroupById(1);
+        mysql.deleteUserInGroup("test2", 1);
+
+
+
+
+
+
     }
 }
 
