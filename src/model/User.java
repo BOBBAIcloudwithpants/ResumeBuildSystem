@@ -11,13 +11,6 @@ public class User {
     private int groupID;
     private List<Integer> grades;
 
-    public int getGroup () {
-        return groupID;
-    }
-
-    public void setGroup (int group) {
-        this.groupID = group;
-    }
 
     public String getUsername () {
         return username;
@@ -88,5 +81,9 @@ public class User {
 
     public int getGradeById(int id){
         return grades.indexOf(id);
+    }
+
+    public String getUserString(){
+        return "("+"'"+username+"','"+password+"',"+isAdmin+")";
     }
 }

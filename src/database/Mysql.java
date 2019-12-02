@@ -1,7 +1,9 @@
 package database;
 
+import model.Group;
 import model.User;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -31,9 +33,20 @@ public class Mysql {
         return result;
     }
 
+
     public void addUser(List<User> users){
         try{
             Statement statement = mConnect.createStatement();
+            for(User user:users){
+                try{
+                    String string = user.getUserString();
+                    statement.executeUpdate("INSERT INTO test.user(username,password,isAdmin) VALUES "+string);
+                }catch (SQLException e){
+                    e.printStackTrace();
+                }
+            }
+
+
         } catch (SQLException e){
             if(e.getMessage().contains("PRIMAEY")){
                 System.out.println("主键重复");
@@ -42,11 +55,11 @@ public class Mysql {
     }
 
     public User getUserInfos(String username) {
-        String sql = "SELECT * FROM `test`.`new_table` WHERE username='"+username+"';";
+        String sql = "SELECT * FROM `test`.`user` WHERE username='"+username+"';";
         try {
             Statement statement = mConnect.createStatement();
             ResultSet resultSet = statement.executeQuery(sql);
-            if(resultSet.first()){
+            while(resultSet.next()){
                 List<Integer> grades = new ArrayList<Integer>();
                 grades.add(resultSet.getInt("grade1"));
                 grades.add(resultSet.getInt("grade2"));
@@ -102,9 +115,69 @@ public class Mysql {
         return result;
     }
 
+    public List<User> getAllUsers(){
+        String sql = "SELECT * FROM test.user";
+
+        try {
+            Statement statement = mConnect.createStatement();
+            ResultSet resultSet = statement.executeQuery(sql);
+
+            List<User> users = new ArrayList<User>();
+
+            if(resultSet.next())
+            while(resultSet.next()){
+                List<Integer> grades = new ArrayList<Integer>();
+                grades.add(resultSet.getInt("grade1"));
+                grades.add(resultSet.getInt("grade2"));
+                grades.add(resultSet.getInt("grade3"));
+                grades.add(resultSet.getInt("grade4"));
+                grades.add(resultSet.getInt("grade5"));
+                User user = new User(
+                        resultSet.getString("username"),
+                        resultSet.getString("password"),
+                        resultSet.getInt("isAdmin"),
+                        resultSet.getString("description"),
+                        resultSet.getInt("groupID"),
+                        grades
+                );
+                users.add(user);
+            }
+            if(users.isEmpty()){
+                return null;
+            }
+            return users;
+        } catch(SQLException e){
+
+        }
+        return null;
+
+    }
+
+    public Group getGroupById(int id){
+        String sql = "SELECT * FROM `test`.`user` WHERE id="+id;
+        Group group = new Group(1);
+
+        try{
+            Statement sta = mConnect.createStatement();
+            ResultSet resultSet = sta.executeQuery(sql);
+
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
+        return group;
+    }
+
+    public boolean appendUserIntoGroup(String username, int groupID){
+        return false;
+    }
+
     public static void main(String[] args){
         Mysql mysql = new Mysql(MysqlManager.getConnection());
+        List<User> users = new ArrayList<>();
+        users.add(new User("bob","12345",1));
 
+        mysql.addUser(users);
     }
 }
 
