@@ -14,7 +14,7 @@ public class UserController {
     }
 
     public boolean findUserByName (String username) {
-        User user = mysql.getUserById(username);
+        User user = mysql.getUserByUsername(username);
         if (user != null) {
             return true;
         }
@@ -22,7 +22,7 @@ public class UserController {
     }
 
     public boolean userLogin (String username, String password) {
-        User user = mysql.getUserById(username);
+        User user = mysql.getUserByUsername(username);
         if (user == null) {
             return false;
         }
@@ -33,7 +33,7 @@ public class UserController {
     }
 
     public boolean registerUser (String username, String password, int isAdmin) {
-        User user = mysql.getUserById(username);
+        User user = mysql.getUserByUsername(username);
         if (user != null) {
             return false; // 已注册
         }
@@ -44,7 +44,7 @@ public class UserController {
     }
 
     public boolean isAdmin (String username) {
-        User user = mysql.getUserById(username);
+        User user = mysql.getUserByUsername(username);
         if (user.getIsAdmin() == 1) {
             return true;
         }
@@ -52,12 +52,12 @@ public class UserController {
     }
 
     public int getGradeByUsernameAndSubject (String username, int id) {
-        User user = mysql.getUserById(username);
+        User user = mysql.getUserByUsername(username);
         return user.getGradeById(id);
     }
 
     public String getDescriptionByUsername (String username) {
-        User user = mysql.getUserById(username);
+        User user = mysql.getUserByUsername(username);
         return user.getDescription();
     }
 
@@ -86,6 +86,31 @@ public class UserController {
 
         return outcome;
     }
+
+    public boolean appendStudentToGroup(String username, int id){
+        if(isAdmin(username) == true){
+            return false;
+        }
+
+        return appendStudentToGroup(username, id);
+    }
+
+    public boolean appendGradeOfStudent(String username, int id, int grade){
+        if(isAdmin(username) == true){
+            return false;
+        }
+
+        return appendGradeOfStudent(username, id, grade);
+    }
+
+    public boolean deleteStudentInGroup(String username, int id){
+        if(isAdmin(username) == true){
+            return false;
+        }
+        return deleteStudentInGroup(username, id);
+    }
+
+
 
 
 
