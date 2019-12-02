@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class User {
+    public static int MAX_GRADE_NUMBER = 5;
     private String username;
     private String password;
     private String description;
@@ -25,6 +26,11 @@ public class User {
         this.password = password;
         this.isAdmin = isAdmin;
         grades = new ArrayList<Integer>();
+        for(int i = 0;i<MAX_GRADE_NUMBER;i++){
+            grades.add(0);
+        }
+
+        groupID = -1;
     }
 
     public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades){

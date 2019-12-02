@@ -14,7 +14,7 @@ public class UserController {
     }
 
     public boolean findUserByName (String username) {
-        User user = mysql.getUserInfos(username);
+        User user = mysql.getUserById(username);
         if (user != null) {
             return true;
         }
@@ -22,7 +22,7 @@ public class UserController {
     }
 
     public boolean userLogin (String username, String password) {
-        User user = mysql.getUserInfos(username);
+        User user = mysql.getUserById(username);
         if (user == null) {
             return false;
         }
@@ -33,7 +33,7 @@ public class UserController {
     }
 
     public boolean registerUser (String username, String password, int isAdmin) {
-        User user = mysql.getUserInfos(username);
+        User user = mysql.getUserById(username);
         if (user != null) {
             return false; // 已注册
         }
@@ -44,7 +44,7 @@ public class UserController {
     }
 
     public boolean isAdmin (String username) {
-        User user = mysql.getUserInfos(username);
+        User user = mysql.getUserById(username);
         if (user.getIsAdmin() == 1) {
             return true;
         }
@@ -52,12 +52,12 @@ public class UserController {
     }
 
     public int getGradeByUsernameAndSubject (String username, int id) {
-        User user = mysql.getUserInfos(username);
+        User user = mysql.getUserById(username);
         return user.getGradeById(id);
     }
 
     public String getDescriptionByUsername (String username) {
-        User user = mysql.getUserInfos(username);
+        User user = mysql.getUserById(username);
         return user.getDescription();
     }
 
