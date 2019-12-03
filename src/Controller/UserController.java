@@ -103,12 +103,6 @@ public class UserController {
         return appendGradeOfStudent(username, id, grade);
     }
 
-    public boolean deleteStudentInGroup(String username, int id){
-        if(isAdmin(username) == true){
-            return false;
-        }
-        return deleteStudentInGroup(username, id);
-    }
 
 
 
