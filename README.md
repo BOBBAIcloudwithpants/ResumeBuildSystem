@@ -41,7 +41,7 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 
 #### 接口
 
-##### 学生
+##### User
 1. 前端：用户登录请求：     
    服务端：     
    后台：1. 判断用户是否在数据库中的接口：bool findUserByName(String username) 在数据库中则返回true，没有则返回false     
@@ -71,6 +71,27 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
    后台：      
         1. 导出 File getProfileByUsername(String username) 导出成功则返回File本身，失败则返回null。
         
+##### Group
+
+1. 前端：根据ID查询组     
+   服务端：     
+   后台：1. Group getGroupById(int id)     
+
+2. 前端：将用户添加到组中     
+   服务端：     
+   后台：1. boolean appendUserInGroup(String username,int id)    
+   
+3. 前端：将用户从某个组中移除
+   服务端：
+   后台：1. boolean removeUserFromGroup(String username, int id)
+   
+4. 前端：删除某个组中的全部用户
+   服务端：
+   后台：1. void deleteAllUserInGroup(int id);
+   
+   
+
+
 
         
    
