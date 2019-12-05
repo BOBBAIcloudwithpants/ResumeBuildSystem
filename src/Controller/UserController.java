@@ -21,6 +21,10 @@ public class UserController {
         return false;
     }
 
+    public User getUserByUsername(String username) {
+        return mysql.getUserByUsername(username);
+    }
+
     public boolean userLogin (String username, String password) {
         User user = mysql.getUserByUsername(username);
         if (user == null) {
