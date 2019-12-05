@@ -20,7 +20,7 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("ResumeBuildSystem");
 
         initRootLayout();
-
+        //gotoSignUpPage();
         gotoSignInPage();
     }
 
@@ -74,7 +74,7 @@ public class MainApp extends Application {
         }
     }
 
-    static void gotoStudentPage() {
+    static void gotoStudentPage(String username) {
         try {
             // Load student page
             FXMLLoader loader = new FXMLLoader();
@@ -88,7 +88,7 @@ public class MainApp extends Application {
         }
     }
 
-    static void gotoTeacherPage() {
+    static void gotoTeacherPage(String username) {
         try {
             // Load student page
             FXMLLoader loader = new FXMLLoader();

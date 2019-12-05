@@ -10,7 +10,7 @@ import javafx.scene.text.Text;
 
 import Controller.UserController.*;
 
-public class RegisterController {
+public class SignUpController {
 
     @FXML
     private TextField user_name_box;
