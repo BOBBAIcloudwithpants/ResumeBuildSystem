@@ -11,7 +11,8 @@ public class User {
     private int isAdmin;
     private int groupID;
     private List<Integer> grades;
-
+    private List<Integer> ranks;
+    private List<String> subjects;
 
     public String getUsername () {
         return username;
@@ -42,7 +43,16 @@ public class User {
         this.grades = grades;
     }
 
-
+    public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades, List<Integer> ranks, List<String> subjects){
+        this.username = username;
+        this.password = password;
+        this.isAdmin = isAdmin;
+        this.description = description;
+        this.groupID = groupID;
+        this.grades = grades;
+        this.ranks = ranks;
+        this.subjects = subjects;
+    }
 
 
     public String getDescription () {

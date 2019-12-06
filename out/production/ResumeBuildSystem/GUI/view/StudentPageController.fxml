@@ -26,9 +26,10 @@
                 <TableColumn fx:id="awardtime" prefWidth="113.5" text="获奖时间" />
             </columns>
         </TableView>
-        <PieChart fx:id="scorechart" layoutX="347.0" layoutY="70.0" prefHeight="22.0" prefWidth="164.0" />
+        <PieChart fx:id="scorechart" layoutX="347.0" layoutY="70.0" prefHeight="118.0" prefWidth="200.0" />
         <Text layoutX="347.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="个人简介：" />
-        <TextArea fx:id="description" layoutX="347.0" layoutY="253.0" prefHeight="118.0" prefWidth="200.0" />
+        <TextArea fx:id="description" layoutX="347.0" layoutY="253.0" prefHeight="118.0" prefWidth="200.0" wrapText="true" />
         <Button fx:id="submit" layoutX="424.0" layoutY="223.0" mnemonicParsing="false" onAction="#submitdescriptionandaward" text="提交奖项和个人简介" />
+      <Button layoutX="392.0" layoutY="33.0" mnemonicParsing="false" text="生成个人简历文件" />
     </children>
 </AnchorPane>

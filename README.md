@@ -27,7 +27,11 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 - class(班级)
 - description(个人描述)
 - isAdmin
-- grade(成绩)    
+- grade(成绩)
+- subject(科目)
+- rank(排名)  
+- awardName(奖项名称)
+- awardTime(获奖时间)  
 #### 方法：
 
 ### 老师

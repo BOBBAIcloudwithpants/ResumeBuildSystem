@@ -20,8 +20,8 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("ResumeBuildSystem");
 
         initRootLayout();
-        //gotoStudentPage("bob");
-        gotoSignInPage();
+        gotoStudentPage("bob");
+        //gotoSignInPage();
     }
 
     /**
@@ -80,12 +80,15 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("../view/StudentPageController.fxml"));
             AnchorPane studentPage = (AnchorPane) loader.load();
-
+            StudentPageController controller = loader.<StudentPageController>getController();
+            controller.setUserName(username);
+            controller.reset();
             // Set student page into the center of root layout
             rootLayout.setCenter(studentPage);
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     static void gotoTeacherPage(String username) {

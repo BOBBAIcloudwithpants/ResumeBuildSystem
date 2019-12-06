@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0bfb307-d68a-40e5-9641-f06caaec591c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInformation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/GUIController/ScoreInformation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/RegisterController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/SignUpController.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/model/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/view/RegisterController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/view/SignUpController.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +77,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Markdown" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -162,17 +166,30 @@
       <workItem from="1575559843340" duration="19000" />
       <workItem from="1575560003762" duration="366000" />
       <workItem from="1575560376333" duration="557000" />
+      <workItem from="1575613731362" duration="13130000" />
     </task>
+    <task id="LOCAL-00001" summary="完成StudentPageContrller.fxml;修改SignUpController.fxml名字及MainAPP.java中相应文件名">
+      <created>1575596667050</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575596667050</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成StudentPageContrller.fxml;修改SignUpController.fxml名字及MainAPP.java中相应文件名" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成StudentPageContrller.fxml;修改SignUpController.fxml名字及MainAPP.java中相应文件名" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="469" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1575549948488">
+    <state x="469" y="63" key="#com.intellij.ide.util.MemberChooser" timestamp="1575621217125">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="469" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1326.706@0.0.1326.706" timestamp="1575549948488" />
+    <state x="469" y="63" key="#com.intellij.ide.util.MemberChooser/0.0.1326.706@0.0.1326.706" timestamp="1575621217125" />
     <state x="515" y="245" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1575554749270">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -181,30 +198,30 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="455" y="245" width="416" height="222" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1326.706@0.0.1326.706" timestamp="1575552562456" />
-    <state x="367" y="0" key="CommitChangelistDialog2" timestamp="1575596396157">
+    <state x="367" y="0" key="CommitChangelistDialog2" timestamp="1575596665904">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="367" y="0" key="CommitChangelistDialog2/0.0.1326.706@0.0.1326.706" timestamp="1575596396157" />
+    <state x="367" y="0" key="CommitChangelistDialog2/0.0.1326.706@0.0.1326.706" timestamp="1575596665904" />
     <state x="467" y="111" key="FileChooserDialogImpl" timestamp="1575595670515">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="467" y="111" key="FileChooserDialogImpl/0.0.1326.706@0.0.1326.706" timestamp="1575595670515" />
-    <state width="1283" height="171" key="GridCell.Tab.0.bottom" timestamp="1575595833682">
+    <state width="1283" height="170" key="GridCell.Tab.0.bottom" timestamp="1575629290593">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="171" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1575595833682" />
-    <state width="1283" height="171" key="GridCell.Tab.0.center" timestamp="1575595833682">
+    <state width="1283" height="170" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1575629290593" />
+    <state width="1283" height="170" key="GridCell.Tab.0.center" timestamp="1575629290592">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="171" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1575595833682" />
-    <state width="1283" height="171" key="GridCell.Tab.0.left" timestamp="1575595833682">
+    <state width="1283" height="170" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1575629290592" />
+    <state width="1283" height="170" key="GridCell.Tab.0.left" timestamp="1575629290592">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="171" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1575595833682" />
-    <state width="1283" height="171" key="GridCell.Tab.0.right" timestamp="1575595833682">
+    <state width="1283" height="170" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1575629290592" />
+    <state width="1283" height="170" key="GridCell.Tab.0.right" timestamp="1575629290593">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="171" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1575595833682" />
+    <state width="1283" height="170" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1575629290593" />
     <state x="373" y="71" key="MultipleFileMergeDialog" timestamp="1575546282543">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -213,10 +230,14 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="151" y="0" key="SettingsEditor/0.0.1326.706@0.0.1326.706" timestamp="1575559414134" />
-    <state x="362" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1575560009012">
+    <state x="256" y="89" key="Vcs.Push.Dialog.v2" timestamp="1575596675961">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1575560009012" />
+    <state x="256" y="89" key="Vcs.Push.Dialog.v2/0.0.1326.706@0.0.1326.706" timestamp="1575596675961" />
+    <state x="362" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1575613776937">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1575613776937" />
     <state x="312" y="157" key="git4idea.merge.GitPullDialog" timestamp="1575594906234">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -233,5 +254,9 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="65" y="0" key="new project wizard/0.0.1326.706@0.0.1326.706" timestamp="1575559681479" />
+    <state x="326" y="27" width="672" height="678" key="search.everywhere.popup" timestamp="1575622599851">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="326" y="27" width="672" height="678" key="search.everywhere.popup/0.0.1326.706@0.0.1326.706" timestamp="1575622599851" />
   </component>
 </project>
