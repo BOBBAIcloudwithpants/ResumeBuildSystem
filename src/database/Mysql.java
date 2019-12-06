@@ -144,18 +144,26 @@ public class Mysql {
             if (resultSet.next())
                 while (resultSet.next()) {
                     List<Integer> grades = new ArrayList<Integer>();
+                    List<Integer> rank = new ArrayList<>();
                     grades.add(resultSet.getInt("grade1"));
                     grades.add(resultSet.getInt("grade2"));
                     grades.add(resultSet.getInt("grade3"));
                     grades.add(resultSet.getInt("grade4"));
                     grades.add(resultSet.getInt("grade5"));
+
+                    for(int i = 1;i<=5;i++){
+                        String temp = "grade"+i;
+                        rank.add(resultSet.getInt(temp));
+
+                    }
                     User user = new User(
                             resultSet.getString("username"),
                             resultSet.getString("password"),
                             resultSet.getInt("isAdmin"),
                             resultSet.getString("description"),
                             resultSet.getInt("groupID"),
-                            grades
+                            grades,
+                            rank
                     );
                     users.add(user);
                 }
@@ -307,9 +315,15 @@ public class Mysql {
 
 
             String sql2 = "update test.group set " + temp + "=\"" + username + "\" where id=" + groupID + ";";
-            group.getUsers().add(user);
+            group.addUser(user);
 
             sta.executeUpdate(sql2);
+
+            for(int j = 1;j<=User.MAX_GRADE_NUMBER;j++){
+                String a = "rank" +j;
+                String t = "update test.user set "+a+"="+user.getRanks().get(j-1)+" where username=\"" + username + "\"";
+                sta.executeUpdate(t);
+            }
 
 
         } catch (SQLException e) {

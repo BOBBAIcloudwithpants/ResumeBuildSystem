@@ -107,10 +107,14 @@ public class UserController {
         return appendGradeOfStudent(username, id, grade);
     }
 
-
-
-
-
+    public boolean setDescriptionByUsername(String username, String description){
+        User user = getUserByUsername(username);
+        if(user == null){
+            return false;
+        }
+        user.setDescription(description);
+        return true;
+    }
 
 
 }

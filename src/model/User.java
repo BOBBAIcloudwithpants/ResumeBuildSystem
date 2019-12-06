@@ -12,7 +12,7 @@ public class User {
     private int groupID;
     private List<Integer> grades;
     private List<Integer> ranks;
-    private List<String> subjects;
+
 
     public String getUsername () {
         return username;
@@ -30,8 +30,12 @@ public class User {
         for(int i = 0;i<MAX_GRADE_NUMBER;i++){
             grades.add(0);
         }
-
+        ranks = new ArrayList<Integer>();
+        for(int i = 0;i<MAX_GRADE_NUMBER;i++){
+            ranks.add(0);
+        }
         groupID = -1;
+
     }
 
     public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades){
@@ -43,7 +47,7 @@ public class User {
         this.grades = grades;
     }
 
-    public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades, List<Integer> ranks, List<String> subjects){
+    public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades, List<Integer> ranks){
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;
@@ -51,7 +55,6 @@ public class User {
         this.groupID = groupID;
         this.grades = grades;
         this.ranks = ranks;
-        this.subjects = subjects;
     }
 
 
@@ -101,5 +104,13 @@ public class User {
 
     public String getUserString(){
         return "("+"'"+username+"','"+password+"',"+isAdmin+")";
+    }
+
+    public List<Integer> getRanks () {
+        return ranks;
+    }
+
+    public void setRanks (List<Integer> ranks) {
+        this.ranks = ranks;
     }
 }

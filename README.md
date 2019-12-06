@@ -22,7 +22,7 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 ## model 
 ### 学生：
 #### 属性：
-- id(根据id登陆)
+- username
 - password
 - class(班级)
 - description(个人描述)
@@ -37,7 +37,7 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 ### 老师
 
 #### 属性：
-- id
+- username
 - password
 - description
 - class
