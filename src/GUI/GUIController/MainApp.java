@@ -20,7 +20,7 @@ public class MainApp extends Application {
         this.primaryStage.setTitle("ResumeBuildSystem");
 
         initRootLayout();
-        //gotoSignUpPage();
+        //gotoStudentPage("bob");
         gotoSignInPage();
     }
 
@@ -50,7 +50,7 @@ public class MainApp extends Application {
         try {
             // Load sign up page
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(MainApp.class.getResource("../view/RegisterController.fxml"));
+            loader.setLocation(MainApp.class.getResource("../view/SignUpController.fxml"));
             AnchorPane signUpPage = (AnchorPane) loader.load();
 
             // Set person overview into the center of root layout.
