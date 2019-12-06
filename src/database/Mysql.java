@@ -1,5 +1,6 @@
 package database;
 
+import model.Award;
 import model.Group;
 import model.User;
 
@@ -56,18 +57,36 @@ public class Mysql {
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {
                 List<Integer> grades = new ArrayList<Integer>();
+                List<Integer> ranks = new ArrayList<>();
+                List<Award> awards = new ArrayList<>();
+
                 grades.add(resultSet.getInt("grade1"));
                 grades.add(resultSet.getInt("grade2"));
                 grades.add(resultSet.getInt("grade3"));
                 grades.add(resultSet.getInt("grade4"));
                 grades.add(resultSet.getInt("grade5"));
+
+                for(int i = 1;i<=User.MAX_GRADE_NUMBER;i++){
+                    String temp = "rank"+i;
+                    ranks.add(resultSet.getInt(temp));
+
+                }
+
+                for(int i = 1;i<=User.MAX_AWARD;i++){
+                    String temp1 = "award"+i;
+                    String temp2 = "time"+i;
+                    awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
+                }
+
                 User user = new User(
                         resultSet.getString("username"),
                         resultSet.getString("password"),
                         resultSet.getInt("isAdmin"),
                         resultSet.getString("description"),
                         resultSet.getInt("groupID"),
-                        grades
+                        grades,
+                        ranks,
+                        awards
                 );
                 return user;
             }
@@ -145,6 +164,7 @@ public class Mysql {
                 while (resultSet.next()) {
                     List<Integer> grades = new ArrayList<Integer>();
                     List<Integer> rank = new ArrayList<>();
+                    List<Award> awards = new ArrayList<>();
                     grades.add(resultSet.getInt("grade1"));
                     grades.add(resultSet.getInt("grade2"));
                     grades.add(resultSet.getInt("grade3"));
@@ -152,9 +172,15 @@ public class Mysql {
                     grades.add(resultSet.getInt("grade5"));
 
                     for(int i = 1;i<=5;i++){
-                        String temp = "grade"+i;
+                        String temp = "rank"+i;
                         rank.add(resultSet.getInt(temp));
 
+                    }
+
+                    for(int i = 1;i<=User.MAX_AWARD;i++){
+                        String temp1 = "award"+i;
+                        String temp2 = "time"+i;
+                        awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
                     }
                     User user = new User(
                             resultSet.getString("username"),
@@ -163,7 +189,8 @@ public class Mysql {
                             resultSet.getString("description"),
                             resultSet.getInt("groupID"),
                             grades,
-                            rank
+                            rank,
+                            awards
                     );
                     users.add(user);
                 }
@@ -333,11 +360,59 @@ public class Mysql {
 
     }
 
+    public Award getAwardByUsernameAndName(String username, String awardname) {
+        User user = getUserByUsername(username);
+        if(user == null) {
+            return null;
+        }
+
+        for(Award item : user.getAwards()){
+            if(item.getTitle().equals(username)){
+                return item;
+            }
+        }
+        return null;
+    }
+
+    public boolean appendAwardByUsername(String username, Award award){
+        User user = getUserByUsername(username);
+
+        if(user == null){
+            return false;
+        }
+
+        if(user.getAwards().size() >= User.MAX_AWARD){
+            return false;
+        }
+
+        user.getAwards().add(award);
+        try{
+            Statement sta = mConnect.createStatement();
+            for(int i = 0;i<user.getAwards().size();i++){
+                int j = i+1;
+                String t1 = "award"+j;
+                String t2 = "time"+j;
+                String temp1 = "update test.user set "+t1+"=\""+user.getAwards().get(i).getTitle()+"\" where username=\"" + username + "\"";
+                String temp2 = "update test.user set "+t2+"=\""+user.getAwards().get(i).getTime()+"\" where username=\"" + username + "\"";
+                sta.executeUpdate(temp1);
+                sta.executeUpdate(temp2);
+
+            }
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return true;
+    }
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
 
-        mysql.appendUserIntoGroup("bob", 2);
-
+        mysql.appendGradeByUsernameAndId("bob", 1, 95);
+        mysql.appendGradeByUsernameAndId("bob", 2, 92);
+        mysql.appendGradeByUsernameAndId("bob", 3, 91);
+        mysql.appendGradeByUsernameAndId("bob", 4, 95);
+        mysql.appendGradeByUsernameAndId("bob", 5, 90);
 
     }
 }

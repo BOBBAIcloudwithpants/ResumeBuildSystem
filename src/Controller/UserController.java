@@ -116,5 +116,13 @@ public class UserController {
         return true;
     }
 
+    public String getAwardnameByName(String username, String awardname){
+        return mysql.getAwardByUsernameAndName(username, awardname).getTitle();
+    }
+
+    public String getAwardtimeByName(String username, String awardname){
+        return mysql.getAwardByUsernameAndName(username, awardname).getTime();
+    }
+
 
 }

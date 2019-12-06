@@ -2,9 +2,11 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class User {
     public static int MAX_GRADE_NUMBER = 5;
+    public static int MAX_AWARD = 4;
     private String username;
     private String password;
     private String description;
@@ -12,6 +14,7 @@ public class User {
     private int groupID;
     private List<Integer> grades;
     private List<Integer> ranks;
+    private List<Award> awards;
 
 
     public String getUsername () {
@@ -22,7 +25,7 @@ public class User {
         this.username = username;
     }
 
-    public User(String username, String password ,int isAdmin){
+    public User(String username, String password ,int isAdmin){ //注册时使用
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;
@@ -35,19 +38,23 @@ public class User {
             ranks.add(0);
         }
         groupID = -1;
+        awards = new ArrayList<Award>();
+        for(int i = 0;i<MAX_AWARD;i++) {
+
+        }
 
     }
 
-    public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades){
-        this.username = username;
-        this.password = password;
-        this.isAdmin = isAdmin;
-        this.description = description;
-        this.groupID = groupID;
-        this.grades = grades;
+
+    public List<Award> getAwards () {
+        return awards;
     }
 
-    public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades, List<Integer> ranks){
+    public void setAwards (List<Award> awards) {
+        this.awards = awards;
+    }
+
+    public User(String username, String password , int isAdmin, String description, int groupID, List<Integer> grades, List<Integer> ranks, List<Award> awards){
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;
@@ -55,7 +62,9 @@ public class User {
         this.groupID = groupID;
         this.grades = grades;
         this.ranks = ranks;
+        this.awards = awards;
     }
+
 
 
     public String getDescription () {
