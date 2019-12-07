@@ -66,15 +66,15 @@ public class Mysql {
                 grades.add(resultSet.getInt("grade4"));
                 grades.add(resultSet.getInt("grade5"));
 
-                for(int i = 1;i<=User.MAX_GRADE_NUMBER;i++){
-                    String temp = "rank"+i;
+                for (int i = 1; i <= User.MAX_GRADE_NUMBER; i++) {
+                    String temp = "rank" + i;
                     ranks.add(resultSet.getInt(temp));
 
                 }
 
-                for(int i = 1;i<=User.MAX_AWARD;i++){
-                    String temp1 = "award"+i;
-                    String temp2 = "time"+i;
+                for (int i = 1; i <= User.MAX_AWARD; i++) {
+                    String temp1 = "award" + i;
+                    String temp2 = "time" + i;
                     awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
                 }
 
@@ -171,15 +171,15 @@ public class Mysql {
                     grades.add(resultSet.getInt("grade4"));
                     grades.add(resultSet.getInt("grade5"));
 
-                    for(int i = 1;i<=5;i++){
-                        String temp = "rank"+i;
+                    for (int i = 1; i <= 5; i++) {
+                        String temp = "rank" + i;
                         rank.add(resultSet.getInt(temp));
 
                     }
 
-                    for(int i = 1;i<=User.MAX_AWARD;i++){
-                        String temp1 = "award"+i;
-                        String temp2 = "time"+i;
+                    for (int i = 1; i <= User.MAX_AWARD; i++) {
+                        String temp1 = "award" + i;
+                        String temp2 = "time" + i;
                         awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
                     }
                     User user = new User(
@@ -277,9 +277,9 @@ public class Mysql {
                     }
 
                 }
-                groups = new Group(id, users);
-            }
 
+            }
+            groups = new Group(id, users);
             if (groups == null) {
                 return null;
             }
@@ -295,16 +295,22 @@ public class Mysql {
     public void clearAllUserOfGroup (int id) { //已测试
         Group group = getGroupById(id);
 
-        group.getUsers().clear();
-
-
         try {
+            List<User> users = group.getUsers();
             Statement sta = mConnect.createStatement();
+            for (User item : users) {
+                String username = item.getUsername();
+                String sql1 = "update test.user set groupID=-1 where username=\"" + username + "\";";
+                sta.executeUpdate(sql1);
+            }
+
             for (int i = 1; i <= 10; i++) {
                 String temp = "username" + i;
                 String sql = "update test.group set " + temp + "=null where id=" + id + ";";
                 sta.executeUpdate(sql);
             }
+
+            group.getUsers().clear();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -346,10 +352,13 @@ public class Mysql {
 
             sta.executeUpdate(sql2);
 
-            for(int j = 1;j<=User.MAX_GRADE_NUMBER;j++){
-                String a = "rank" +j;
-                String t = "update test.user set "+a+"="+user.getRanks().get(j-1)+" where username=\"" + username + "\"";
-                sta.executeUpdate(t);
+            List<User> users = group.getUsers();
+            for (User user1 : users) {
+                for (int j = 1; j <= User.MAX_GRADE_NUMBER; j++) {
+                    String a = "rank" + j;
+                    String t = "update test.user set " + a + "=" + user1.getRanks().get(j - 1) + " where username=\"" + user1.getUsername() + "\"";
+                    sta.executeUpdate(t);
+                }
             }
 
 
@@ -360,60 +369,55 @@ public class Mysql {
 
     }
 
-    public Award getAwardByUsernameAndName(String username, String awardname) {
+    public Award getAwardByUsernameAndName (String username, String awardname) {
         User user = getUserByUsername(username);
-        if(user == null) {
+        if (user == null) {
             return null;
         }
 
-        for(Award item : user.getAwards()){
-            if(item.getTitle().equals(username)){
+        for (Award item : user.getAwards()) {
+            if (item.getTitle().equals(username)) {
                 return item;
             }
         }
         return null;
     }
 
-    public boolean appendAwardByUsername(String username, Award award){
+    public boolean appendAwardByUsername (String username, Award award) {
         User user = getUserByUsername(username);
 
-        if(user == null){
+        if (user == null) {
             return false;
         }
 
-        if(user.getAwards().size() >= User.MAX_AWARD){
+        if (user.getAwards().size() >= User.MAX_AWARD) {
             return false;
         }
 
         user.getAwards().add(award);
-        try{
+        try {
             Statement sta = mConnect.createStatement();
-            for(int i = 0;i<user.getAwards().size();i++){
-                int j = i+1;
-                String t1 = "award"+j;
-                String t2 = "time"+j;
-                String temp1 = "update test.user set "+t1+"=\""+user.getAwards().get(i).getTitle()+"\" where username=\"" + username + "\"";
-                String temp2 = "update test.user set "+t2+"=\""+user.getAwards().get(i).getTime()+"\" where username=\"" + username + "\"";
+            for (int i = 0; i < user.getAwards().size(); i++) {
+                int j = i + 1;
+                String t1 = "award" + j;
+                String t2 = "time" + j;
+                String temp1 = "update test.user set " + t1 + "=\"" + user.getAwards().get(i).getTitle() + "\" where username=\"" + username + "\"";
+                String temp2 = "update test.user set " + t2 + "=\"" + user.getAwards().get(i).getTime() + "\" where username=\"" + username + "\"";
                 sta.executeUpdate(temp1);
                 sta.executeUpdate(temp2);
 
             }
 
-        } catch (SQLException e){
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
         return true;
     }
+
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-
-        mysql.appendGradeByUsernameAndId("bob", 1, 95);
-        mysql.appendGradeByUsernameAndId("bob", 2, 92);
-        mysql.appendGradeByUsernameAndId("bob", 3, 91);
-        mysql.appendGradeByUsernameAndId("bob", 4, 95);
-        mysql.appendGradeByUsernameAndId("bob", 5, 90);
-
+        mysql.appendUserIntoGroup("test", 1);
     }
 }
 

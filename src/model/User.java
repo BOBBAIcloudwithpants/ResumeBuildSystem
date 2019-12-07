@@ -108,7 +108,7 @@ public class User {
     }
 
     public int getGradeById(int id){
-        return grades.indexOf(id);
+        return grades.get(id);
     }
 
     public String getUserString(){

@@ -8,7 +8,7 @@ public class Group {
     public static int MAX_CAPACITY = 20;
     private int groupID;
     private List<User> users;
-    private List<Integer>[] ranks;
+    private List<Integer>[] ranks; // 存储了每个科目用户的排名（索引）
 
     public void sort(int[] a, List<Integer> target){
         int []temp = new int[a.length];
@@ -55,8 +55,9 @@ public class Group {
     public Group (int groupID, List<User> users) {
         this.groupID = groupID;
         this.users = users;
+        ranks = new List[User.MAX_GRADE_NUMBER];
         for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
-            ranks[i] = new ArrayList<>();
+            ranks[i] = new ArrayList<Integer>();
         }
         for(int i = 0;i<User.MAX_GRADE_NUMBER; i++){
             int[] grade = new int[users.size()];
@@ -75,19 +76,26 @@ public class Group {
         List<Integer> userGrade = user.getGrades();
 
         for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
-            for (int j = 0; j < ranks[i].size(); j++) {
-                if (userGrade.get(i) > users.get(ranks[i].get(j)).getGrades().get(i)) {
-                    int k = j;
-                    while(k < ranks[i].size()){ // 向后的加1
-                        int g = users.get(ranks[i].get(k)).getRanks().get(i);
-                        users.get(ranks[i].get(k)).getRanks().set(i, g+1);
-                        k++;
-                    }
-                    ranks[i].add(j, findIndex(user.getUsername(), users));
-                    userRank.set(i, j);
-                    break;
+            ranks[i].clear();
+        }
+        for(int i = 0;i<User.MAX_GRADE_NUMBER; i++){
+            int[] grade = new int[users.size()];
+
+            for(int j = 0;j<users.size();j++){
+                grade[j] = users.get(j).getGradeById(i);
+            }
+
+            sort(grade, ranks[i]);
+        }
+
+        for(int k = 0 ; k<users.size() ; k++){
+        for(int i = 0;i<User.MAX_GRADE_NUMBER;i++){
+            for(int j = 0;j<ranks[i].size();j++){
+                if(ranks[i].get(j).equals(k)){
+                    users.get(k).getRanks().set(i, j);
                 }
             }
+        }
         }
 
     }
