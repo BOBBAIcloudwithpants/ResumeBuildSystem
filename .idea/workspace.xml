@@ -4,7 +4,7 @@
     <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/Mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Mysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Award.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Award.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="213">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
               <folding>
                 <element signature="e#2233#2234#0" expanded="true" />
@@ -52,8 +52,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5322">
-              <caret line="98" selection-start-line="98" selection-end-line="98" />
+            <state relative-caret-position="253">
+              <caret line="538" column="20" selection-start-line="538" selection-start-column="20" selection-end-line="538" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Award.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+              <folding>
+                <element signature="e#266#267#0" expanded="true" />
+                <element signature="e#294#295#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -61,7 +74,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-927">
+            <state relative-caret-position="-944">
               <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
             </state>
           </provider>
@@ -70,8 +83,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+            <state>
+              <caret selection-start-column="2" selection-end-line="119" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#3384#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +120,9 @@
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$PROJECT_DIR$/src/model/Group.java" />
-        <option value="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" />
         <option value="$PROJECT_DIR$/src/model/User.java" />
+        <option value="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" />
+        <option value="$PROJECT_DIR$/src/model/Award.java" />
         <option value="$PROJECT_DIR$/src/database/Mysql.java" />
       </list>
     </option>
@@ -224,12 +241,12 @@
       <option name="presentableId" value="Default" />
       <updated>1575681531391</updated>
       <workItem from="1575681532576" duration="11496000" />
-      <workItem from="1575710468919" duration="6527000" />
+      <workItem from="1575710468919" duration="7535000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18023000" />
+    <option name="totallyTimeSpent" value="19031000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -245,14 +262,14 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4896215" weight="0.29081634" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4908425" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4884005" visible="true" weight="0.29081634" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4908425" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4981685" weight="0.35508022" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.497558" weight="0.35408163" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50915754" side_tool="true" visible="true" weight="0.4" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51159954" side_tool="true" visible="true" weight="0.29081634" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4981685" weight="0.32941177" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
@@ -288,13 +305,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/database/Mysql.java</url>
-          <line>98</line>
-          <properties />
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/database/Mysql.java</url>
-          <line>476</line>
+          <line>477</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
@@ -469,14 +480,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="35" lean-forward="true" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+        <state>
+          <caret selection-start-column="2" selection-end-line="119" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#3384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-944">
+          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="213">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#2233#2234#0" expanded="true" />
@@ -489,17 +510,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/model/Award.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-927">
-          <caret line="32" column="45" lean-forward="true" selection-start-line="32" selection-start-column="45" selection-end-line="32" selection-end-column="45" />
+        <state relative-caret-position="270">
+          <caret line="24" column="42" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+          <folding>
+            <element signature="e#266#267#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5322">
-          <caret line="98" selection-start-line="98" selection-end-line="98" />
+        <state relative-caret-position="253">
+          <caret line="538" column="20" selection-start-line="538" selection-start-column="20" selection-end-line="538" selection-end-column="63" />
         </state>
       </provider>
     </entry>

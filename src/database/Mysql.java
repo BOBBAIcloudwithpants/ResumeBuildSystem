@@ -34,13 +34,15 @@ public class Mysql {
     public int AwardIndex(String title, List<Award> awards){
         int i = 0;
         for(Award award : awards){
-            if(award.getTitle() == title){
+            if(award.getTitle().equals(title)){
+                System.out.println(i);
                 return i;
             }
             else{
                 i++;
             }
         }
+
 
         return -1;
     }
@@ -513,6 +515,8 @@ public class Mysql {
                 String sql1 = "update test.user set "+t1+"=null where username=\""+username+"\"";
                 String sql2 = "update test.user set "+t2+"=null where username=\""+username+"\"";
 
+                System.out.println(sql1);
+                System.out.println(sql2);
                 sta.executeUpdate(sql1);
                 sta.executeUpdate(sql2);
             } catch( SQLException e){
@@ -521,7 +525,7 @@ public class Mysql {
         }
         else{
             try {
-                Statement sta = mConnect.createStatement();
+
                 for (int j = i; j < user.getAwards().size() - 1; j++) {
                     int k = j + 1;
                     String pre1 = "title" + k;
@@ -531,20 +535,24 @@ public class Mysql {
                     String next1 = "title" + k;
                     String next2 = "time" + k;
 
-                    String sql1 = "select " + next1 + " from test.user where username=\"" + username + "\";";
-                    String sql2 = "select " + next2 + " from test.user where username=\"" + username + "\";";
+                    String sql1 = "select * from test.user where username=\"" + username + "\";";
+                    Statement sta = mConnect.createStatement();
                     ResultSet set1 = sta.executeQuery(sql1);
-                    ResultSet set2 = sta.executeQuery(sql2);
+
 
                     String value1 = "";
                     String value2 = "";
                     while (set1.next()){
                         value1 = set1.getString(next1);
-                        value2 = set2.getString(next2);
+                        value2 = set1.getString(next2);
                     }
 
+                    System.out.println(sql1);
                     String sql3 = "update test.user set "+pre1+"=\""+value1+"\" where username=\""+username+"\";";
                     String sql4 = "update test.user set "+pre2+"=\""+value2+"\" where username=\""+username+"\";";
+                    System.out.println(sql3);
+                    System.out.println(sql4);
+
 
                     sta.executeUpdate(sql3);
                     sta.executeUpdate(sql4);
@@ -555,7 +563,7 @@ public class Mysql {
 
                 String sql1 = "update test.user set "+t1+"=null where username=\""+username+"\"";
                 String sql2 = "update test.user set "+t2+"=null where username=\""+username+"\"";
-
+                Statement sta = mConnect.createStatement();
                 sta.executeUpdate(sql1);
                 sta.executeUpdate(sql2);
 
@@ -604,6 +612,7 @@ public class Mysql {
         mysql.appendAwardByUsername("bob", "acm", "date");
         mysql.appendAwardByUsername("bob", "dd", "date");
         mysql.appendAwardByUsername("bob", "aa", "date");
+        mysql.deleteAwardByUsernameAndName("bob", "dd");
     }
 }
 
