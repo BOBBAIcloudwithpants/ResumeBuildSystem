@@ -14,6 +14,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.text.Text;
+import model.Award;
 import model.User;
 
 import java.net.URL;
@@ -88,11 +89,11 @@ public class StudentPageController implements Initializable {
         List<Integer> ranks = new ArrayList<Integer>();
         ranks.add(1);
         ranks.add(3);
-        List<String> subjects = new ArrayList<String>();
-        subjects.add("语文");
-        subjects.add("英语");
+        List<Award> awards = new ArrayList<Award>();
+        awards.add(new Award("2000-05-09","acm");
 
-        User user = new User("bob","123",0,"I'm bob.",1, grades, ranks, subjects);
+
+        User user = new User("bob","123",0,"I'm bob.",1, grades, ranks, awards);
         username.setText("姓名："+user.getUsername());
         grade.setText("班级："+user.getGroupID());
         if(user.getIsAdmin()==1){

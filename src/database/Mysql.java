@@ -438,6 +438,22 @@ public class Mysql {
         return true;
     }
 
+    public boolean appendAwardByUsername(String username, String title, String time){
+        User user = getUserByUsername(username);
+
+        if(user == null) {
+            return false;
+        }
+
+        Award award = new Award(title, time);
+
+        if(user.getAwards().size() >= User.MAX_AWARD) {
+            return false;
+        }
+
+        return true;
+    }
+
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
         mysql.clearAllUserOfGroup(1);

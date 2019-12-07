@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/database/Mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Mysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/Group.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Group.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,127 +31,55 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Group.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="89" selection-start-line="89" selection-end-line="89" />
-              <folding>
-                <element signature="e#2482#2483#0" expanded="true" />
-                <element signature="e#2516#2517#0" expanded="true" />
-                <element signature="e#2558#2559#0" expanded="true" />
-                <element signature="e#2586#2587#0" expanded="true" />
-                <element signature="e#2638#2639#0" expanded="true" />
-                <element signature="e#2672#2673#0" expanded="true" />
-                <element signature="e#2704#2705#0" expanded="true" />
-                <element signature="e#2734#2735#0" expanded="true" />
-                <element signature="e#2778#2779#0" expanded="true" />
-                <element signature="e#2816#2817#0" expanded="true" />
-                <element signature="e#2853#2854#0" expanded="true" />
-                <element signature="e#2881#2882#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="401">
-              <caret line="110" selection-start-line="110" selection-end-line="110" />
+            <state relative-caret-position="195">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="e#2233#2234#0" expanded="true" />
                 <element signature="e#2263#2264#0" expanded="true" />
                 <element signature="e#2307#2308#0" expanded="true" />
                 <element signature="e#2345#2346#0" expanded="true" />
+                <element signature="e#2541#2542#0" expanded="true" />
                 <element signature="e#2578#2579#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="442" column="36" selection-start-line="442" selection-start-column="36" selection-end-line="442" selection-end-column="36" />
+            <state relative-caret-position="338">
+              <caret line="453" selection-start-line="453" selection-end-line="453" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/SimpleQuery.class">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            <state relative-caret-position="135">
+              <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
               <folding>
-                <element signature="e#221#222#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1935#1944#0" expanded="true" />
+                <element signature="e#2039#2048#0" expanded="true" />
+                <element signature="e#2158#2165#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/AbstractQuery.class">
+        <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/TeacherPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="172" selection-start-line="172" selection-end-line="172" />
-              <folding>
-                <element signature="e#5421#5422#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/conf/AbstractRuntimeProperty.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="139" selection-start-line="139" selection-end-line="139" />
-              <folding>
-                <element signature="e#4699#4700#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/conf/DefaultPropertySet.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="127" selection-start-line="127" selection-end-line="127" />
-              <folding>
-                <element signature="e#3782#3783#0" expanded="true" />
-                <element signature="e#3826#3827#0" expanded="true" />
-                <element signature="e#4017#4018#0" expanded="true" />
-                <element signature="e#4061#4062#0" expanded="true" />
-                <element signature="e#4756#4757#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/CoreSession.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="64" selection-start-line="64" selection-end-line="64" />
-              <folding>
-                <element signature="e#3186#3187#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/NativeSession.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="888" selection-start-line="888" selection-end-line="888" />
-              <folding>
-                <element signature="e#45416#45417#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -200,7 +127,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="64" />
-    <option name="y" value="31" />
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -244,8 +171,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,36 +220,31 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fa890a40-f3e9-487b-ab0f-247f94e8f908" name="Default Changelist" comment="" />
+      <changelist id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="" />
       <created>1575681531391</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1575681531391</updated>
       <workItem from="1575681532576" duration="11496000" />
+      <workItem from="1575710468919" duration="825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11496000" />
+    <option name="totallyTimeSpent" value="12321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="31" width="1680" height="1027" extended-state="0" />
+    <frame x="64" y="23" width="1680" height="1027" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.498779" weight="0.35508022" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.508547" side_tool="true" visible="true" weight="0.4" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Messages" sideWeight="0.4981685" weight="0.32941177" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.491453" weight="0.30481285" />
@@ -330,16 +252,22 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32967034" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4981685" visible="true" weight="0.35508022" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50183153" side_tool="true" visible="true" weight="0.35508022" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4981685" weight="0.32941177" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32967034" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,16 +297,6 @@
     </SUITE>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-start-column="2" selection-end-line="118" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#3373#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="971">
@@ -420,50 +338,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/NativeSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="888" selection-start-line="888" selection-end-line="888" />
-          <folding>
-            <element signature="e#45416#45417#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/CoreSession.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="64" selection-start-line="64" selection-end-line="64" />
-          <folding>
-            <element signature="e#3186#3187#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/conf/DefaultPropertySet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="127" selection-start-line="127" selection-end-line="127" />
-          <folding>
-            <element signature="e#3782#3783#0" expanded="true" />
-            <element signature="e#3826#3827#0" expanded="true" />
-            <element signature="e#4017#4018#0" expanded="true" />
-            <element signature="e#4061#4062#0" expanded="true" />
-            <element signature="e#4756#4757#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/conf/AbstractRuntimeProperty.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="139" selection-start-line="139" selection-end-line="139" />
-          <folding>
-            <element signature="e#4699#4700#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/jdbc/StatementImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="262">
@@ -495,43 +369,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/SimpleQuery.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#221#222#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/AbstractQuery.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="172" selection-start-line="172" selection-end-line="172" />
-          <folding>
-            <element signature="e#5421#5422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="e#2233#2234#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2345#2346#0" expanded="true" />
-            <element signature="e#2578#2579#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="1320">
           <caret line="89" selection-start-line="89" selection-end-line="89" />
           <folding>
             <element signature="e#2482#2483#0" expanded="true" />
@@ -550,10 +390,107 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/conf/DefaultPropertySet.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1410">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#4756#4757#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/CoreSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
+          <folding>
+            <element signature="e#3186#3187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/SimpleQuery.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/conf/AbstractRuntimeProperty.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="139" selection-start-line="139" selection-end-line="139" />
+          <folding>
+            <element signature="e#4699#4700#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/AbstractQuery.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="172" selection-start-line="172" selection-end-line="172" />
+          <folding>
+            <element signature="e#5421#5422#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/NativeSession.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="888" selection-start-line="888" selection-end-line="888" />
+          <folding>
+            <element signature="e#45416#45417#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/TeacherPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#2233#2234#0" expanded="true" />
+            <element signature="e#2263#2264#0" expanded="true" />
+            <element signature="e#2307#2308#0" expanded="true" />
+            <element signature="e#2345#2346#0" expanded="true" />
+            <element signature="e#2541#2542#0" expanded="true" />
+            <element signature="e#2578#2579#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="442" column="36" selection-start-line="442" selection-start-column="36" selection-end-line="442" selection-end-column="36" />
+        <state relative-caret-position="338">
+          <caret line="453" selection-start-line="453" selection-end-line="453" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1935#1944#0" expanded="true" />
+            <element signature="e#2039#2048#0" expanded="true" />
+            <element signature="e#2158#2165#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
