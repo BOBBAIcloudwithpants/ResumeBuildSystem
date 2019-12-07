@@ -124,5 +124,17 @@ public class UserController {
         return mysql.getAwardByUsernameAndName(username, awardname).getTime();
     }
 
+    public void deleteAllAwardsByUsername(String username) {
+        mysql.clearAllAwardsByUsername(username);
+    }
+
+    public boolean deleteAwardByUsernameAndAwardname(String username, String awardname){
+        return mysql.deleteAwardByUsernameAndName(username, awardname);
+    }
+
+    public boolean appendAwardByUsername(String username, String title, String time){
+        return mysql.appendAwardByUsername(username, title, time);
+    }
+
 
 }

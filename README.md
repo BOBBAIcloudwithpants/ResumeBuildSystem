@@ -55,6 +55,8 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
    服务端：     
    后台：1. 注册用户并写入数据库：bool registerUser(String username, String password, int isAdmin) 注册成功则返回true，没有则返回false
 
+##### Grade
+在表结构中有5个字段，用于存放成绩。未录入的成绩默认为0
 3. 前端：上传成绩信息请求：     
    服务端：       
    后台：1. 判断该用户是否是管理员：bool isAdmin(String username), 是则true，不是则false       
@@ -92,7 +94,34 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 4. 前端：删除某个组中的全部用户
    服务端：
    后台：1. void deleteAllUserInGroup(int id);
-   
+
+
+#### Award
+
+在表结构中留有5个位置，存放奖项标题和获奖时间
+
+1. 前端：为某个用户添加奖项     
+    服务端：     
+    后台：boolean appendAwardByUsername(String username, String title, String time) 添加成功返回true，否则返回false
+
+2. 前端：删除某个用户的奖项     
+    服务端:     
+    后台: boolean deleteAwardByUsernameAndAwardname(String username, String awardname) 删除成功返回true，否则返回false
+
+3. 前端：删除某个用户的全部奖项     
+    服务端：     
+    后台：void deleteAllAwardsByUsername(String username) 
+
+
+#### Rank
+
+在表结构中有5个位置，当且仅当用户被加入某个group中排名有效，否则排名无效，为0
+
+在将用户加入group或从group中删除后自动变化。
+
+1
+
+
    
 
 

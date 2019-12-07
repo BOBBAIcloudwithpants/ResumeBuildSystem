@@ -198,10 +198,13 @@ public class Mysql {
                     }
 
                     for (int i = 1; i <= User.MAX_AWARD; i++) {
-                        String temp1 = "award" + i;
+                        String temp1 = "title" + i;
                         String temp2 = "time" + i;
-                        awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
+                        if (resultSet.getString(temp1) != null && resultSet.getString(temp2) != null && resultSet.getString(temp1) != "" && resultSet.getString(temp2) != "") {
+                            awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
+                        }
                     }
+
                     User user = new User(
                             resultSet.getString("username"),
                             resultSet.getString("password"),
