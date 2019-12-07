@@ -1,5 +1,7 @@
 package database;
 
+import com.sun.glass.ui.Window;
+import javafx.util.Pair;
 import model.Award;
 import model.Group;
 import model.User;
@@ -29,6 +31,19 @@ public class Mysql {
         return -1;
     }
 
+    public int AwardIndex(String title, List<Award> awards){
+        int i = 0;
+        for(Award award : awards){
+            if(award.getTitle() == title){
+                return i;
+            }
+            else{
+                i++;
+            }
+        }
+
+        return -1;
+    }
 
 
     public void addUser (List<User> users) { //已测试
@@ -74,9 +89,11 @@ public class Mysql {
                 }
 
                 for (int i = 1; i <= User.MAX_AWARD; i++) {
-                    String temp1 = "award" + i;
+                    String temp1 = "title" + i;
                     String temp2 = "time" + i;
-                    awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
+                    if (resultSet.getString(temp1) != null && resultSet.getString(temp2) != null && resultSet.getString(temp1) != "" && resultSet.getString(temp2) != "") {
+                        awards.add(new Award(resultSet.getString(temp1), resultSet.getString(temp2)));
+                    }
                 }
 
                 User user = new User(
@@ -422,7 +439,7 @@ public class Mysql {
             Statement sta = mConnect.createStatement();
             for (int i = 0; i < user.getAwards().size(); i++) {
                 int j = i + 1;
-                String t1 = "award" + j;
+                String t1 = "title" + j;
                 String t2 = "time" + j;
                 String temp1 = "update test.user set " + t1 + "=\"" + user.getAwards().get(i).getTitle() + "\" where username=\"" + username + "\"";
                 String temp2 = "update test.user set " + t2 + "=\"" + user.getAwards().get(i).getTime() + "\" where username=\"" + username + "\"";
@@ -438,25 +455,155 @@ public class Mysql {
         return true;
     }
 
-    public boolean appendAwardByUsername(String username, String title, String time){
+
+    public boolean appendAwardByUsername (String username, String title, String time) {
+        User user = getUserByUsername(username);
+
+        if (user == null) {
+            return false;
+        }
+
+        if(user.getAwards().size() >= User.MAX_AWARD){
+            return false;
+        }
+
+
+
+        int t = user.getAwards().size() + 1;
+        String temp1 = "title" + t;
+        String temp2 = "time" + t;
+
+        try {
+
+            String sql1 = "update test.user set " + temp1 + "=\"" + title + "\" where username=\"" + username + "\"";
+            String sql2 = "update test.user set " + temp2 + "=\"" + time + "\" where username=\"" + username + "\"";
+            System.out.println(sql1);
+            System.out.println(sql2);
+
+            Statement sta = mConnect.createStatement();
+            sta.executeUpdate(sql1);
+            sta.executeUpdate(sql2);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        Award award = new Award(title, time);
+        user.getAwards().add(award);
+        return true;
+    }
+
+    public boolean deleteAwardByUsernameAndName(String username, String title){
         User user = getUserByUsername(username);
 
         if(user == null) {
             return false;
         }
 
-        Award award = new Award(title, time);
-
-        if(user.getAwards().size() >= User.MAX_AWARD) {
+        int i = AwardIndex(title, user.getAwards());
+        if(i < 0) {
             return false;
         }
 
+        if(i == user.getAwards().size()-1){
+            try{
+                Statement sta = mConnect.createStatement();
+                String t1 = "title"+user.getAwards().size();
+                String t2 = "time"+user.getAwards().size();
+
+                String sql1 = "update test.user set "+t1+"=null where username=\""+username+"\"";
+                String sql2 = "update test.user set "+t2+"=null where username=\""+username+"\"";
+
+                sta.executeUpdate(sql1);
+                sta.executeUpdate(sql2);
+            } catch( SQLException e){
+                e.printStackTrace();
+            }
+        }
+        else{
+            try {
+                Statement sta = mConnect.createStatement();
+                for (int j = i; j < user.getAwards().size() - 1; j++) {
+                    int k = j + 1;
+                    String pre1 = "title" + k;
+                    String pre2 = "time" + k;
+
+                    k++;
+                    String next1 = "title" + k;
+                    String next2 = "time" + k;
+
+                    String sql1 = "select " + next1 + " from test.user where username=\"" + username + "\";";
+                    String sql2 = "select " + next2 + " from test.user where username=\"" + username + "\";";
+                    ResultSet set1 = sta.executeQuery(sql1);
+                    ResultSet set2 = sta.executeQuery(sql2);
+
+                    String value1 = "";
+                    String value2 = "";
+                    while (set1.next()){
+                        value1 = set1.getString(next1);
+                        value2 = set2.getString(next2);
+                    }
+
+                    String sql3 = "update test.user set "+pre1+"=\""+value1+"\" where username=\""+username+"\";";
+                    String sql4 = "update test.user set "+pre2+"=\""+value2+"\" where username=\""+username+"\";";
+
+                    sta.executeUpdate(sql3);
+                    sta.executeUpdate(sql4);
+                }
+
+                String t1 = "title"+user.getAwards().size();
+                String t2 = "time"+user.getAwards().size();
+
+                String sql1 = "update test.user set "+t1+"=null where username=\""+username+"\"";
+                String sql2 = "update test.user set "+t2+"=null where username=\""+username+"\"";
+
+                sta.executeUpdate(sql1);
+                sta.executeUpdate(sql2);
+
+
+
+
+            } catch (SQLException e){
+                e.printStackTrace();
+            }
+        }
+
+        user.getAwards().remove(i);
+
         return true;
+
     }
+
+    public void clearAllAwardsByUsername(String username){
+
+        for(int i = 1;i<=User.MAX_AWARD;i++){
+            String temp1 = "title"+i;
+            String temp2 = "time"+i;
+
+            try{
+                Statement sta = mConnect.createStatement();
+                String sql1 = "update test.user set "+temp1+"=null where username=\""+username+"\";";
+                String sql2 = "update test.user set "+temp2+"=null where username=\""+username+"\";";
+
+                sta.executeUpdate(sql1);
+                sta.executeUpdate(sql2);
+
+            } catch(SQLException e){
+                e.printStackTrace();
+
+            }
+
+
+        }
+
+    }
+
 
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        mysql.clearAllUserOfGroup(1);
+        mysql.clearAllAwardsByUsername("bob");
+        mysql.appendAwardByUsername("bob", "acm", "date");
+        mysql.appendAwardByUsername("bob", "dd", "date");
+        mysql.appendAwardByUsername("bob", "aa", "date");
     }
 }
 

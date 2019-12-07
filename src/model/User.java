@@ -39,9 +39,7 @@ public class User {
         }
         groupID = -1;
         awards = new ArrayList<Award>();
-        for(int i = 0;i<MAX_AWARD;i++) {
 
-        }
 
     }
 
