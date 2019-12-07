@@ -10,6 +10,33 @@ public class Group {
     private List<User> users;
     private List<Integer>[] ranks; // 存储了每个科目用户的排名（索引）
 
+    public void countRank() {
+
+        for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
+            ranks[i].clear();
+        }
+        for(int i = 0;i<User.MAX_GRADE_NUMBER; i++){
+            int[] grade = new int[users.size()];
+
+            for(int j = 0;j<users.size();j++){
+                grade[j] = users.get(j).getGradeById(i);
+            }
+
+            sort(grade, ranks[i]);
+        }
+
+        for(int k = 0 ; k<users.size() ; k++){
+            for(int i = 0;i<User.MAX_GRADE_NUMBER;i++){
+                for(int j = 0;j<ranks[i].size();j++){
+                    if(ranks[i].get(j).equals(k)){
+                        users.get(k).getRanks().set(i, j);
+                    }
+                }
+            }
+        }
+
+    }
+
     public void sort(int[] a, List<Integer> target){
         int []temp = new int[a.length];
         for(int i = 0;i<a.length;i++){
@@ -59,44 +86,13 @@ public class Group {
         for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
             ranks[i] = new ArrayList<Integer>();
         }
-        for(int i = 0;i<User.MAX_GRADE_NUMBER; i++){
-            int[] grade = new int[users.size()];
-
-            for(int j = 0;j<users.size();j++){
-                grade[j] = users.get(j).getGradeById(i);
-            }
-
-            sort(grade, ranks[i]);
-        }
+        countRank();
     }
 
     public void addUser (User user) {
         users.add(user);
-        List<Integer> userRank = user.getRanks();
-        List<Integer> userGrade = user.getGrades();
 
-        for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
-            ranks[i].clear();
-        }
-        for(int i = 0;i<User.MAX_GRADE_NUMBER; i++){
-            int[] grade = new int[users.size()];
-
-            for(int j = 0;j<users.size();j++){
-                grade[j] = users.get(j).getGradeById(i);
-            }
-
-            sort(grade, ranks[i]);
-        }
-
-        for(int k = 0 ; k<users.size() ; k++){
-        for(int i = 0;i<User.MAX_GRADE_NUMBER;i++){
-            for(int j = 0;j<ranks[i].size();j++){
-                if(ranks[i].get(j).equals(k)){
-                    users.get(k).getRanks().set(i, j);
-                }
-            }
-        }
-        }
+        countRank();
 
     }
 

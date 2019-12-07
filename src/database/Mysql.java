@@ -30,6 +30,7 @@ public class Mysql {
     }
 
 
+
     public void addUser (List<User> users) { //已测试
         try {
             Statement statement = mConnect.createStatement();
@@ -248,6 +249,23 @@ public class Mysql {
             sta.executeUpdate(sql3);
             group.getUsers().remove(findIndex(username, group.getUsers()));
             user.setGroupID(-1);
+            group.countRank();
+
+            for (int j = 1; j <= User.MAX_GRADE_NUMBER; j++) {
+                String a = "rank" + j;
+                String t = "update test.user set " + a + "=0" + " where username=\"" + user.getUsername() + "\"";
+                sta.executeUpdate(t);
+            }
+
+            List<User> users = group.getUsers();
+            for (User user1 : users) {
+                for (int j = 1; j <= User.MAX_GRADE_NUMBER; j++) {
+                    String a = "rank" + j;
+                    String t = "update test.user set " + a + "=" + user1.getRanks().get(j - 1) + " where username=\"" + user1.getUsername() + "\"";
+                    sta.executeUpdate(t);
+                }
+            }
+
             String sql4 = "update test.user set groupID=-1 where username=\"" + user.getUsername() + "\";";
             sta.executeUpdate(sql4);
 
@@ -302,6 +320,11 @@ public class Mysql {
                 String username = item.getUsername();
                 String sql1 = "update test.user set groupID=-1 where username=\"" + username + "\";";
                 sta.executeUpdate(sql1);
+                for (int j = 1; j <= User.MAX_GRADE_NUMBER; j++) {
+                    String a = "rank" + j;
+                    String t = "update test.user set " + a + "=0" + " where username=\"" + item.getUsername() + "\"";
+                    sta.executeUpdate(t);
+                }
             }
 
             for (int i = 1; i <= 10; i++) {
@@ -417,7 +440,7 @@ public class Mysql {
 
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        mysql.appendUserIntoGroup("test", 1);
+        mysql.clearAllUserOfGroup(1);
     }
 }
 
