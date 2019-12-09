@@ -3,6 +3,7 @@ package database;
 import com.sun.glass.ui.Window;
 import javafx.util.Pair;
 import model.Award;
+import model.File;
 import model.Group;
 import model.User;
 
@@ -612,10 +613,20 @@ public class Mysql {
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
         mysql.clearAllAwardsByUsername("bob");
-        mysql.appendAwardByUsername("bob", "acm", "date");
-        mysql.appendAwardByUsername("bob", "dd", "date");
-        mysql.appendAwardByUsername("bob", "aa", "date");
-        mysql.deleteAwardByUsernameAndName("bob", "dd");
+        mysql.clearAllUserOfGroup(1);
+        mysql.appendUserIntoGroup("bob", 1);
+        mysql.appendUserIntoGroup("test", 1);
+        File groupFile = new File(1);
+        System.out.print(groupFile.getFile());
+//        mysql.appendAwardByUsername("bob", "acm", "date");
+//        mysql.appendAwardByUsername("bob", "dd", "date");
+//        mysql.appendAwardByUsername("bob", "aa", "date");
+//        mysql.deleteAwardByUsernameAndName("bob", "dd");
+//        mysql.appendUserIntoGroup("bob", 1);
+//        mysql.appendUserIntoGroup("test", 1);
+//        mysql.appendUserIntoGroup("test1", 1);
+//        File userFile = new File(1);
+//        System.out.print(userFile.getFile());
     }
 }
 
