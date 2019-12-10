@@ -93,6 +93,7 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("../view/StudentPageController.fxml"));
             AnchorPane studentPage = (AnchorPane) loader.load();
+
             StudentPageController controller = loader.<StudentPageController>getController();
             controller.setUserName(username);
             controller.reset();

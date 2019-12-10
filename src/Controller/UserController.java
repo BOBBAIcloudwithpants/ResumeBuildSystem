@@ -1,6 +1,7 @@
 package Controller;
 
 import database.*;
+import model.Award;
 import model.User;
 
 import java.util.ArrayList;
@@ -137,6 +138,19 @@ public class UserController {
 
     public boolean appendAwardByUsername(String username, String title, String time){
         return mysql.appendAwardByUsername(username, title, time);
+    }
+
+    public boolean setAwardsByUsername(String username, List<Award> awards) {
+        User user = getUserByUsername(username);
+        boolean flag = true;
+
+        for(Award a : awards) {
+            flag = appendAwardByUsername(username, a.getTitle(), a.getTime());
+            if(flag == false){
+                return false;
+            }
+        }
+        return true;
     }
 
 
