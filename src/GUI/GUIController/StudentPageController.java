@@ -110,9 +110,7 @@ public class StudentPageController implements Initializable {
         for(int i = 0; i < tc.size(); i++){
             newAwards.add(tc.get(i).toAward());
         }
-
-        System.out.println(newAwards.toString());
-
+        usercontroller.setAwardsByUsername(userName, newAwards);
         usercontroller.setDescriptionByUsername(userName, description.getText());
     }
 
