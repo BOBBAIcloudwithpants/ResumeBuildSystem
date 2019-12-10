@@ -22,7 +22,7 @@ public class Award {
         this.title = title;
     }
 
-    public Award(String time, String title){
+    public Award(String title, String time){
         this.time = time;
         this.title = title;
     }
