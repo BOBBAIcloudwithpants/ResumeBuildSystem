@@ -21,9 +21,6 @@ public class MainApp extends Application {
 
         initRootLayout();
         gotoMenuPage();
-        //gotoSignUpPage();
-        //gotoStudentPage("bob");
-        //gotoSignInPage();
     }
 
     /**
@@ -113,7 +110,7 @@ public class MainApp extends Application {
             AnchorPane teacherPage = (AnchorPane) loader.load();
 
             TeacherPageController controller = loader.<TeacherPageController>getController();
-            controller.reset(username, 0);
+            controller.reset(username);
 
             // Set student page into the center of root layout
             rootLayout.setCenter(teacherPage);
