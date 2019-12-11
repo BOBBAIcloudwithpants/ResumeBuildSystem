@@ -89,7 +89,7 @@ public class StudentPageController implements Initializable {
         }
         model.File text = new model.File(userName);
         //outFile.println(text.getFile());
-        outFile.println("cxt");
+        outFile.println("resume");
         outFile.close();
     }
 
@@ -116,18 +116,7 @@ public class StudentPageController implements Initializable {
 
     public void reset(){
 
-        //User user = usercontroller.getUserByUsername(userName);
-        List<Integer> grades = new ArrayList<Integer>();
-        grades.add(99);
-        grades.add(73);
-        List<Integer> ranks = new ArrayList<Integer>();
-        ranks.add(1);
-        ranks.add(3);
-        List<Award> awards = new ArrayList<Award>();
-        awards.add(new Award("acm","2000-05-09"));
-
-
-        User user = new User("bob","123",0,"I'm bob.",1, grades, ranks, awards);
+        User user = usercontroller.getUserByUsername(userName);
 
         setInformation(user);
         setDescription(user);
@@ -154,11 +143,14 @@ public class StudentPageController implements Initializable {
 
     public void setScoretable(User user) {
         List<String> subjects = new ArrayList<String>();
-        subjects.add("语文");
-        subjects.add("英语");
+        subjects.add("Java");
+        subjects.add("计组");
+        subjects.add("数值");
+        subjects.add("概统");
+        subjects.add("Web");
         List<Integer> grades = user.getGrades();
         List<Integer> ranks = user.getRanks();
-        for(int i = 0; i < 2; i++){
+        for(int i = 0; i < grades.size(); i++){
             scoreData.add(new ScoreInformation(subjects.get(i), grades.get(i), ranks.get(i)));
         }
         subject.setCellValueFactory(scoreData->scoreData.getValue().getTsubject());
@@ -170,7 +162,7 @@ public class StudentPageController implements Initializable {
     public void setChart(User user){
         int count[] = new int[5];
         List<Integer> grades = user.getGrades();
-        for(int i = 0; i < 2; i++){
+        for(int i = 0; i < grades.size(); i++){
             if(grades.get(i)<60){
                 count[0]++;
             }
@@ -191,8 +183,11 @@ public class StudentPageController implements Initializable {
         for(int i = 0; i < 5; i++){
             if(count[i]>0){
                 String interval;
-                if(i<4){
-                    interval = (60+10*i) +"-"+ (69+10*i);
+                if(i<4 && i>1){
+                    interval = (50+10*i) +"-"+ (59+10*i);
+                }
+                else if(i==0){
+                    interval = "<60";
                 }
                 else{
                     interval = "90-100";

@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/GUI/GUIController/AwardInformation.java" afterDir="false" />
+    <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/72fc3c51-4d62-43db-b157-3bc37e268d1e.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/72fc3c51-4d62-43db-b157-3bc37e268d1e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/Controller/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/database/MysqlManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/database/MysqlManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/database/MysqlManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/MysqlManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +30,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ResumeBuildSystem@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ResumeBuildSystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ResumeBuildSystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ResumeBuildSystem@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="user: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -69,6 +94,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -78,9 +104,10 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -121,7 +148,17 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ResumeBuildSystem@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ResumeBuildSystem@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6dea7e3d" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -142,29 +179,64 @@
       <workItem from="1575710468919" duration="825000" />
       <workItem from="1575712169223" duration="6192000" />
       <workItem from="1575966798891" duration="889000" />
+      <workItem from="1575983362350" duration="479000" />
+      <workItem from="1575988433757" duration="6780000" />
+      <workItem from="1576025170620" duration="5531000" />
+      <workItem from="1576035310184" duration="586000" />
     </task>
+    <task id="LOCAL-00001" summary="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能">
+      <created>1575981035607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575981035608</updated>
+    </task>
+    <task id="LOCAL-00002" summary="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能">
+      <created>1575981236382</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575981236382</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="623" height="297" key="GridCell.Tab.0.bottom" timestamp="1575980667022">
+    <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576026364420">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="623" height="297" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1575980667022" />
-    <state width="623" height="297" key="GridCell.Tab.0.center" timestamp="1575980667022">
+    <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1326.706@0.0.1326.706" timestamp="1576026364420" />
+    <state x="244" y="0" key="CommitChangelistDialog2" timestamp="1575981233698">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="623" height="297" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1575980667022" />
-    <state width="623" height="297" key="GridCell.Tab.0.left" timestamp="1575980667022">
+    <state x="244" y="0" key="CommitChangelistDialog2/0.0.1326.706@0.0.1326.706" timestamp="1575981233698" />
+    <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1575990883747">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="623" height="297" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1575980667022" />
-    <state width="623" height="297" key="GridCell.Tab.0.right" timestamp="1575980667022">
+    <state width="242" height="189" key="DatabaseViewActions_Filter/0.0.1326.706@0.0.1326.706" timestamp="1575990883747" />
+    <state width="1283" height="297" key="GridCell.Tab.0.bottom" timestamp="1576035610177">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="623" height="297" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1575980667022" />
+    <state width="1283" height="297" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1576035610177" />
+    <state width="1283" height="297" key="GridCell.Tab.0.center" timestamp="1576035610173">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state width="1283" height="297" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1576035610173" />
+    <state width="1283" height="297" key="GridCell.Tab.0.left" timestamp="1576035610171">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state width="1283" height="297" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1576035610171" />
+    <state width="1283" height="297" key="GridCell.Tab.0.right" timestamp="1576035610175">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state width="1283" height="297" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1576035610175" />
     <state width="632" height="214" key="GridCell.Tab.1.bottom" timestamp="1575728803971">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -181,18 +253,50 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state width="632" height="214" key="GridCell.Tab.1.right/0.0.1326.706@0.0.1326.706" timestamp="1575728803971" />
-    <state x="362" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1575966800730">
+    <state x="373" y="71" key="MultipleFileMergeDialog" timestamp="1575981108719">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1575966800730" />
+    <state x="373" y="71" key="MultipleFileMergeDialog/0.0.1326.706@0.0.1326.706" timestamp="1575981108719" />
+    <state x="144" y="0" key="SettingsEditor" timestamp="1576025811280">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="144" y="0" key="SettingsEditor/0.0.1326.706@0.0.1326.706" timestamp="1576025811280" />
+    <state x="256" y="89" key="Vcs.Push.Dialog.v2" timestamp="1575981251678">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="256" y="89" key="Vcs.Push.Dialog.v2/0.0.1326.706@0.0.1326.706" timestamp="1575981251678" />
+    <state x="244" y="11" key="com.intellij.database.dbimport.ImportDialog" timestamp="1576027298153">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="244" y="11" key="com.intellij.database.dbimport.ImportDialog/0.0.1326.706@0.0.1326.706" timestamp="1576027298153" />
+    <state x="394" y="161" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1576035489145">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="394" y="161" key="com.intellij.database.dbimport.ImportUtil.MyDialog/0.0.1326.706@0.0.1326.706" timestamp="1576035489145" />
+    <state x="510" y="8" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1576030097460">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="510" y="8" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1326.706@0.0.1326.706" timestamp="1576030097460" />
+    <state x="540" y="106" key="com.intellij.database.view.ui.DbObjectDialog" timestamp="1575991432756">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="540" y="106" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1326.706@0.0.1326.706" timestamp="1575991432756" />
+    <state x="362" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1576035313668">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1576035313668" />
+    <state x="312" y="157" key="git4idea.merge.GitPullDialog" timestamp="1575981091173">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="312" y="157" key="git4idea.merge.GitPullDialog/0.0.1326.706@0.0.1326.706" timestamp="1575981091172" />
     <state x="441" y="219" key="git4idea.ui.GitUnstashDialog" timestamp="1575967968324">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="441" y="219" key="git4idea.ui.GitUnstashDialog/0.0.1326.706@0.0.1326.706" timestamp="1575967968324" />
-    <state x="326" y="27" width="672" height="678" key="search.everywhere.popup" timestamp="1575979200323">
+    <state x="326" y="27" width="672" height="678" key="search.everywhere.popup" timestamp="1575994451456">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="326" y="27" width="672" height="678" key="search.everywhere.popup/0.0.1326.706@0.0.1326.706" timestamp="1575979200323" />
+    <state x="326" y="27" width="672" height="678" key="search.everywhere.popup/0.0.1326.706@0.0.1326.706" timestamp="1575994451456" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -214,77 +318,5 @@
     <SUITE FILE_PATH="coverage/ResumeBuildSystem$Mysql.ic" NAME="Mysql Coverage Results" MODIFIED="1575684547369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>database.*</FILTER>
     </SUITE>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lib</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
