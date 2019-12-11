@@ -41,8 +41,24 @@ public class User {
         awards = new ArrayList<Award>();
 
 
+
     }
 
+    public User(String username, String password ,int isAdmin, int groupID){ //注册时使用
+        this.username = username;
+        this.password = password;
+        this.isAdmin = isAdmin;
+        grades = new ArrayList<Integer>();
+        for(int i = 0;i<MAX_GRADE_NUMBER;i++){
+            grades.add(0);
+        }
+        ranks = new ArrayList<Integer>();
+        for(int i = 0;i<MAX_GRADE_NUMBER;i++){
+            ranks.add(0);
+        }
+        this.groupID = groupID;
+        awards = new ArrayList<Award>();
+    }
 
     public List<Award> getAwards () {
         return awards;
@@ -110,7 +126,7 @@ public class User {
     }
 
     public String getUserString(){
-        return "("+"'"+username+"','"+password+"',"+isAdmin+")";
+        return "("+"'"+username+"','"+password+"',"+isAdmin+","+"null"+","+groupID+","+grades.get(0)+","+grades.get(1)+","+grades.get(2)+","+grades.get(3)+","+grades.get(4)+","+ranks.get(0)+","+ranks.get(1)+","+ranks.get(2)+","+ranks.get(3)+","+ranks.get(4)+")";
     }
 
     public List<Integer> getRanks () {

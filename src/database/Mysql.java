@@ -55,7 +55,8 @@ public class Mysql {
             for (User user : users) {
                 try {
                     String string = user.getUserString();
-                    statement.executeUpdate("INSERT INTO test.user(username,password,isAdmin) VALUES " + string);
+                    System.out.println(string);
+                    statement.executeUpdate("INSERT INTO test.user(username,password,isAdmin,description,groupID,grade1,grade2,grade3,grade4,grade5,rank1,rank2,rank3,rank4,rank5) VALUES " + string);
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }

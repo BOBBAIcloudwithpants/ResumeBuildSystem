@@ -224,6 +224,6 @@ public class StudentPageController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
         usercontroller = new UserController();
-
+        usercontroller.registerUser("fff", "1", 0, 1);
     }
 }
