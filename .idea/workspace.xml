@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/database/Mysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/database/Mysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/User.java" afterDir="false" />
-    </list>
+    <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,8 +54,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="280" column="37" lean-forward="true" selection-start-line="280" selection-start-column="37" selection-end-line="280" selection-end-column="37" />
+            <state relative-caret-position="-6990">
+              <caret line="153" column="30" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -78,14 +72,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="165" column="25" lean-forward="true" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
+            <state relative-caret-position="134">
+              <caret line="175" column="60" lean-forward="true" selection-start-line="175" selection-start-column="60" selection-end-line="175" selection-end-column="60" />
               <folding>
-                <element signature="e#1014#1015#0" expanded="true" />
-                <element signature="e#1064#1065#0" expanded="true" />
-                <element signature="e#2862#2863#0" expanded="true" />
-                <element signature="e#2924#2925#0" expanded="true" />
-                <element signature="e#3892#3893#0" expanded="true" />
+                <element signature="e#1081#1082#0" expanded="true" />
+                <element signature="e#2922#2923#0" expanded="true" />
+                <element signature="e#3915#3916#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -168,6 +160,7 @@
       <find>clear</find>
       <find>set</find>
       <find>getGroup</find>
+      <find>grade</find>
       <find>appendGradeOf</find>
     </findStrings>
   </component>
@@ -381,7 +374,7 @@
       <workItem from="1575988433757" duration="6780000" />
       <workItem from="1576025170620" duration="5531000" />
       <workItem from="1576035310184" duration="586000" />
-      <workItem from="1576058114598" duration="3264000" />
+      <workItem from="1576058114598" duration="3551000" />
     </task>
     <task id="LOCAL-00001" summary="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能">
       <created>1575981035607</created>
@@ -401,7 +394,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3812000" />
+    <option name="totallyTimeSpent" value="4099000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="541" y="23" width="1006" height="968" extended-state="0" />
@@ -417,15 +410,15 @@
       <window_info id="Learn" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.47302905" visible="true" weight="0.35958904" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4719917" weight="0.35958904" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48988286" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49014777" weight="0.4874429" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.6524896" visible="true" weight="0.4874429" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.526971" side_tool="true" visible="true" weight="0.35958904" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4834025" weight="0.32648402" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.34751037" side_tool="true" visible="true" weight="0.4874429" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.48236513" weight="0.32648402" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -641,22 +634,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="165" column="25" lean-forward="true" selection-start-line="165" selection-start-column="25" selection-end-line="165" selection-end-column="25" />
+        <state relative-caret-position="134">
+          <caret line="175" column="60" lean-forward="true" selection-start-line="175" selection-start-column="60" selection-end-line="175" selection-end-column="60" />
           <folding>
-            <element signature="e#1014#1015#0" expanded="true" />
-            <element signature="e#1064#1065#0" expanded="true" />
-            <element signature="e#2862#2863#0" expanded="true" />
-            <element signature="e#2924#2925#0" expanded="true" />
-            <element signature="e#3892#3893#0" expanded="true" />
+            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#2922#2923#0" expanded="true" />
+            <element signature="e#3915#3916#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="280" column="37" lean-forward="true" selection-start-line="280" selection-start-column="37" selection-end-line="280" selection-end-column="37" />
+        <state relative-caret-position="-6990">
+          <caret line="153" column="30" selection-start-line="153" selection-start-column="25" selection-end-line="153" selection-end-column="30" />
         </state>
       </provider>
     </entry>
