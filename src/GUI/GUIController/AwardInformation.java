@@ -30,6 +30,6 @@ public class AwardInformation {
     }
 
     public Award toAward(){
-        return new Award(title.toString(), time.toString());
+        return new Award(title.getValue(), time.getValue());
     }
 }

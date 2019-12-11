@@ -1,8 +1,6 @@
 package GUI.GUIController;
 
 import Controller.UserController;
-import javafx.beans.value.ObservableIntegerValue;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -46,10 +44,6 @@ public class StudentPageController implements Initializable {
     @FXML
     private TableColumn<ScoreInformation, Integer> rank;
 
-    private final ObservableList<ScoreInformation> scoreData = FXCollections.observableArrayList();
-    private final ObservableList<PieChart.Data> chartData = FXCollections.observableArrayList();
-    private final ObservableList<AwardInformation> awardData = FXCollections.observableArrayList();
-
     @FXML
     private TableView<AwardInformation> awardtable;
 
@@ -71,6 +65,17 @@ public class StudentPageController implements Initializable {
     @FXML
     private Button createFileButton;
 
+    private UserController usercontroller;
+
+    private String userName;
+
+    private final ObservableList<ScoreInformation> scoreData = FXCollections.observableArrayList();
+
+    private final ObservableList<PieChart.Data> chartData = FXCollections.observableArrayList();
+
+    private final ObservableList<AwardInformation> awardData = FXCollections.observableArrayList();
+
+    //生成简历文件
     @FXML
     void createFile(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
@@ -88,32 +93,28 @@ public class StudentPageController implements Initializable {
             e.printStackTrace();
         }
         model.File text = new model.File(userName);
-        //outFile.println(text.getFile());
-        outFile.println("resume");
+        User user = usercontroller.getUserByUsername(userName);
+        //outFile.println(user.getResume());
         outFile.close();
     }
 
-    private UserController usercontroller;
-
-    private String userName;
-
-    //public static PassParameter passParameter = new PassParameter();
-
+    //设置本页面的学生username
     void setUserName(String name){
         userName = name;
     }
 
+    //提交个人简介和获奖记录
     @FXML
     void submitdescriptionandaward(ActionEvent event) {
-        List<AwardInformation> tc = awardtable.getItems();
         ArrayList<Award> newAwards = new ArrayList<Award>();
-        for(int i = 0; i < tc.size(); i++){
-            newAwards.add(tc.get(i).toAward());
+        for(int i = 0; i < awardData.size(); i++){
+            newAwards.add(awardData.get(i).toAward());
         }
-        usercontroller.setAwardsByUsername(userName, newAwards);
+        usercontroller.resetAwardsByUsername(userName, newAwards);
         usercontroller.setDescriptionByUsername(userName, description.getText());
     }
 
+    //设置本页面各部分显示的内容
     public void reset(){
 
         User user = usercontroller.getUserByUsername(userName);
@@ -123,9 +124,9 @@ public class StudentPageController implements Initializable {
         setScoretable(user);
         setChart(user);
         setAwardtable(user);
-
     }
 
+    //设置顶部个人信息，包括姓名、班级、身份
     public void setInformation(User user){
         username.setText("姓名："+user.getUsername());
         grade.setText("班级："+user.getGroupID());
@@ -137,10 +138,12 @@ public class StudentPageController implements Initializable {
         }
     }
 
+    //设置个人简介
     public void setDescription(User user){
         description.setText(user.getDescription());
     }
 
+    //设置成绩表格
     public void setScoretable(User user) {
         List<String> subjects = new ArrayList<String>();
         subjects.add("Java");
@@ -159,6 +162,7 @@ public class StudentPageController implements Initializable {
         scoretable.setItems(scoreData);
     }
 
+    //设置成绩分布饼图
     public void setChart(User user){
         int count[] = new int[5];
         List<Integer> grades = user.getGrades();
@@ -201,6 +205,7 @@ public class StudentPageController implements Initializable {
         scorechart.setTitle("成绩分布表");
     }
 
+    //设置获奖记录表格
     public void setAwardtable(User user){
         List<Award> awards = user.getAwards();
         for(int i = 0; i < 4; i++){
@@ -222,8 +227,6 @@ public class StudentPageController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
         usercontroller = new UserController();
-        usercontroller.registerUser("fff", "1", 0, 1);
     }
 }
