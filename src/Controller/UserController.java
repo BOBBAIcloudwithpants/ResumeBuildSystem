@@ -2,6 +2,7 @@ package Controller;
 
 import database.*;
 import model.Award;
+import model.File;
 import model.Group;
 import model.User;
 
@@ -170,6 +171,14 @@ public class UserController {
 
 
         return setAwardsByUsername(username, awards);
+    }
+
+    public String getStudentFile(String username) {
+        return new File(username).getFile();
+    }
+
+    public String getGroupFile(int id) {
+        return new File(id).getFile();
     }
 
     public static void main (String[] args) {
