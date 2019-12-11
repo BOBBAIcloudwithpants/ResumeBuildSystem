@@ -609,24 +609,28 @@ public class Mysql {
 
     }
 
+    public boolean setDescriptionByUsername(String username, String description){
+        User user = getUserByUsername(username);
+
+        if(user == null){
+            return false;
+        }
+        try{
+            Statement sta = mConnect.createStatement();
+            String sql = "update test.user set description=\""+description+"\" where username=\""+username+"\"";
+            sta.executeUpdate(sql);
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+
+        return true;
+    }
+
 
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        mysql.clearAllAwardsByUsername("bob");
-        mysql.clearAllUserOfGroup(1);
-        mysql.appendUserIntoGroup("bob", 1);
-        mysql.appendUserIntoGroup("test", 1);
-        File groupFile = new File(1);
-        System.out.print(groupFile.getFile());
-//        mysql.appendAwardByUsername("bob", "acm", "date");
-//        mysql.appendAwardByUsername("bob", "dd", "date");
-//        mysql.appendAwardByUsername("bob", "aa", "date");
-//        mysql.deleteAwardByUsernameAndName("bob", "dd");
-//        mysql.appendUserIntoGroup("bob", 1);
-//        mysql.appendUserIntoGroup("test", 1);
-//        mysql.appendUserIntoGroup("test1", 1);
-//        File userFile = new File(1);
-//        System.out.print(userFile.getFile());
+        mysql.setDescriptionByUsername("bob", "12345");
+
     }
 }
 

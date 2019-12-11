@@ -117,7 +117,8 @@ public class UserController {
             return false;
         }
         user.setDescription(description);
-        return true;
+
+        return mysql.setDescriptionByUsername(username, description);
     }
 
     public String getAwardnameByName(String username, String awardname){
@@ -151,6 +152,13 @@ public class UserController {
             }
         }
         return true;
+    }
+
+    public static void main (String[] args) {
+        UserController userController = new UserController();
+
+        userController.setDescriptionByUsername("bob", "123232");
+
     }
 
 
