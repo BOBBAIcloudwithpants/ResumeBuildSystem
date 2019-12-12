@@ -25,6 +25,9 @@ public class SignUpController {
     private PasswordField passwordConfirm;
 
     @FXML
+    private TextField groupIDField;
+
+    @FXML
     private Button signUpButton;
 
     @FXML
@@ -48,7 +51,11 @@ public class SignUpController {
             errmsg.setText("用户名不能为空");
             return;
         }
-
+        //check groupID
+        if (groupIDField.getText().equals("")) {
+            errmsg.setText("班级序号不能为空");
+            return;
+        }
         //check password
         if (password.getText().length() == 0) {
             errmsg.setText("密码不能为空");
@@ -68,7 +75,7 @@ public class SignUpController {
         int isAdmin = (isTeacher.isSelected()) ? 1 : 0;
 
         UserController user = new UserController();
-        boolean success = user.registerUser(username.getText(), password.getText(), isAdmin);
+        boolean success = user.registerUser(username.getText(), password.getText(), isAdmin, Integer.parseInt(groupIDField.getText()));
         if (!success) {
             errmsg.setText("用户已存在");
         }

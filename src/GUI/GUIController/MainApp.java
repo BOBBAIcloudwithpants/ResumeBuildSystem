@@ -109,7 +109,7 @@ public class MainApp extends Application {
             loader.setLocation(MainApp.class.getResource("../view/TeacherPageController.fxml"));
             AnchorPane teacherPage = (AnchorPane) loader.load();
 
-            TeacherPageController controller = loader.<TeacherPageController>getController();
+            TeacherPageController controller = loader.getController();
             controller.reset(username);
 
             // Set student page into the center of root layout
