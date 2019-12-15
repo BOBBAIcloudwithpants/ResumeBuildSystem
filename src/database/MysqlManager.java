@@ -13,7 +13,7 @@ public class MysqlManager {
         try{
             System.out.println("init--");
             Class.forName("com.mysql.cj.jdbc.Driver");
-            mConnect = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai", "root","baijiadong120201");
+            mConnect = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useSSL=false&useUnicode=true&characterEncoding=utf-8&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true", "root","baijiadong120201");
 
 
         }catch (ClassNotFoundException | SQLException e){

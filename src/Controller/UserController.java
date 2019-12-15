@@ -173,20 +173,22 @@ public class UserController {
         return setAwardsByUsername(username, awards);
     }
 
-    public String getStudentFile(String username) {
+    public boolean createGroup (int id) {
+        return mysql.createGroup(id);
+    }
+
+    public String getStudentFile (String username) {
         return new File(username).getFile();
     }
 
-    public String getGroupFile(int id) {
+    public String getGroupFile (int id) {
         return new File(id).getFile();
     }
 
     public static void main (String[] args) {
         UserController userController = new UserController();
 
-        userController.setDescriptionByUsername("bob", "123232");
-
-        userController.registerUser("eee", "1234", 1, 1);
+        userController.registerUser("wjs", "12345", 1, 5);
 
     }
 

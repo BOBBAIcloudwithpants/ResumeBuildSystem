@@ -1,5 +1,6 @@
 package database;
 
+import Controller.UserController;
 import com.sun.glass.ui.Window;
 import javafx.util.Pair;
 import model.Award;
@@ -48,6 +49,17 @@ public class Mysql {
         return -1;
     }
 
+    public boolean createGroup(int id) {
+        try{
+            Statement sta = mConnect.createStatement();
+            String sql = "insert into test.group(id) values ("+id+")";
+            sta.executeUpdate(sql);
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
+
+        return true;
+    }
 
     public void addUser (List<User> users) { //已测试
         try {
