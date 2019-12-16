@@ -285,7 +285,7 @@ public class Mysql {
             sta.executeUpdate(sql3);
             group.getUsers().remove(findIndex(username, group.getUsers()));
             user.setGroupID(-1);
-            group.countRank();
+            group.updateRank();
 
             for (int j = 1; j <= User.MAX_GRADE_NUMBER; j++) {
                 String a = "rank" + j;
@@ -640,10 +640,16 @@ public class Mysql {
     }
 
 
+
+
+
+
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        mysql.setDescriptionByUsername("bob", "12345");
-
+        mysql.appendUserIntoGroup("test",5);
+        mysql.appendUserIntoGroup("test1", 5);
+        mysql.appendUserIntoGroup("test2", 5);
+        mysql.appendUserIntoGroup("test3", 5);
     }
 }
 
