@@ -39,8 +39,8 @@ public class Mysql {
         try{
 
             Statement sta = mConnect.createStatement();
-            String sql = "create table group(id int(11) not null,username1 varchar(45),username2 varchar(45),username3 varchar(45),username4 varchar(45),username5 varchar(45),username6 varchar(45),username7 varchar(45),username8 varchar(45),username9 varchar(45), username10 varchar(45));";
-            sta.executeUpdate(sql);
+            //String sql = "create table group(id int(11) not null,username1 varchar(45),username2 varchar(45),username3 varchar(45),username4 varchar(45),username5 varchar(45),username6 varchar(45),username7 varchar(45),username8 varchar(45),username9 varchar(45), username10 varchar(45));";
+            //sta.executeUpdate(sql);
 
         } catch (SQLException e){
             e.printStackTrace();

@@ -24,8 +24,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <PasswordField fx:id="password" promptText="密码" GridPane.rowIndex="1" />
+
                 <TextField fx:id="username" prefHeight="23.0" prefWidth="157.0" promptText="用户名" />
+                <PasswordField fx:id="password" promptText="密码" GridPane.rowIndex="1" />
                 <HBox prefHeight="100.0" prefWidth="200.0" spacing="52.0" GridPane.rowIndex="2">
                     <children>
                         <Button fx:id="SignInButton" mnemonicParsing="false" onAction="#ToMain" prefHeight="23.0" prefWidth="70.0" text="登录" />

@@ -1,6 +1,13 @@
 package GUI.GUIController;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
+import java.net.Socket;
+import java.nio.Buffer;
+import java.util.ArrayList;
+import java.util.List;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +21,18 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private static BorderPane rootLayout;
 
+    static List<String> subjects = new ArrayList<String>();
+
     @Override
     public void start(Stage primaryStage) {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("ResumeBuildSystem");
+
+        subjects.add("Java");
+        subjects.add("计组");
+        subjects.add("数值");
+        subjects.add("概统");
+        subjects.add("Web");
 
         initRootLayout();
         gotoMenuPage();
@@ -90,9 +105,8 @@ public class MainApp extends Application {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(MainApp.class.getResource("../view/StudentPageController.fxml"));
             AnchorPane studentPage = (AnchorPane) loader.load();
-
             StudentPageController controller = loader.<StudentPageController>getController();
-            controller.setUserName(username);
+            //controller.setUserName(username);
             controller.reset();
             // Set student page into the center of root layout
             rootLayout.setCenter(studentPage);

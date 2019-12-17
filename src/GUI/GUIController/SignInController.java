@@ -10,6 +10,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 
+import java.io.PrintWriter;
+import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -18,7 +20,7 @@ import GUI.GUIController.MainApp;
 import model.User;
 
 
-public class SignInController implements Initializable {
+public class SignInController implements Initializable{
     private UserController usercontroller;
     @FXML
     private PasswordField password;
@@ -35,6 +37,9 @@ public class SignInController implements Initializable {
     @FXML
     private Text tips;
 
+    Socket socket = null;
+    PrintWriter output = null;
+
     @FXML
     void ToMain(ActionEvent event) {
         usercontroller = new UserController();
@@ -42,11 +47,22 @@ public class SignInController implements Initializable {
         String UserName = username.getText();
         String Password = password.getText();
 
+
         if(usercontroller.userLogin(UserName, Password)){
+
             if(usercontroller.isAdmin(UserName)){
                 MainApp.gotoTeacherPage(UserName);
             }
             else{
+                try {
+                    socket = new Socket("localhost",1056);
+                    output = new PrintWriter(socket.getOutputStream());
+                    output.println(UserName);
+                    output.flush();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
                 MainApp.gotoStudentPage(UserName);
             }
         }
@@ -64,4 +80,5 @@ public class SignInController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
 
     }
+
 }

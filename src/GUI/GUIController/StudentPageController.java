@@ -1,6 +1,10 @@
 package GUI.GUIController;
 
 import Controller.UserController;
+import javafx.beans.property.IntegerProperty;
+import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,8 +18,11 @@ import javafx.stage.DirectoryChooser;
 import model.Award;
 import model.User;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
+import java.net.Socket;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -93,14 +100,8 @@ public class StudentPageController implements Initializable {
             e.printStackTrace();
         }
         model.File text = new model.File(userName);
-        User user = usercontroller.getUserByUsername(userName);
-        //outFile.println(user.getResume());
+        outFile.println(text.getFile());
         outFile.close();
-    }
-
-    //设置本页面的学生username
-    void setUserName(String name){
-        userName = name;
     }
 
     //提交个人简介和获奖记录
@@ -116,6 +117,16 @@ public class StudentPageController implements Initializable {
 
     //设置本页面各部分显示的内容
     public void reset(){
+        try {
+            Socket socket = new Socket("localhost",1056);
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            while (userName==null) {
+                userName = input.readLine();
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
         User user = usercontroller.getUserByUsername(userName);
 
@@ -145,16 +156,10 @@ public class StudentPageController implements Initializable {
 
     //设置成绩表格
     public void setScoretable(User user) {
-        List<String> subjects = new ArrayList<String>();
-        subjects.add("Java");
-        subjects.add("计组");
-        subjects.add("数值");
-        subjects.add("概统");
-        subjects.add("Web");
         List<Integer> grades = user.getGrades();
         List<Integer> ranks = user.getRanks();
         for(int i = 0; i < grades.size(); i++){
-            scoreData.add(new ScoreInformation(subjects.get(i), grades.get(i), ranks.get(i)));
+            scoreData.add(new ScoreInformation(MainApp.subjects.get(i), grades.get(i), ranks.get(i)));
         }
         subject.setCellValueFactory(scoreData->scoreData.getValue().getTsubject());
         score.setCellValueFactory(scoreData->scoreData.getValue().getTscore().asObject());
@@ -228,5 +233,71 @@ public class StudentPageController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         usercontroller = new UserController();
+    }
+}
+
+class AwardInformation {
+    private final StringProperty title;
+    private final StringProperty time;
+
+    public AwardInformation(String title, String time){
+        this.title = new SimpleStringProperty(title);
+        this.time = new SimpleStringProperty(time);
+    }
+
+    public void setName(String title){
+        this.title.set(title);
+    }
+
+    public StringProperty getName(){
+        return title;
+    }
+
+    public void setTime(String time){
+        this.time.set(time);
+    }
+
+    public StringProperty getTime(){
+        return time;
+    }
+
+    public Award toAward(){
+        return new Award(title.getValue(), time.getValue());
+    }
+}
+
+class ScoreInformation {
+    private final StringProperty tsubject;
+    private final IntegerProperty tscore;
+    private final IntegerProperty trank;
+
+    public ScoreInformation(String subject, Integer score, Integer rank){
+        tsubject = new SimpleStringProperty(subject);
+        tscore = new SimpleIntegerProperty(score);
+        trank = new SimpleIntegerProperty(rank);
+    }
+
+    public void setTsubject(String subject){
+        tsubject.set(subject);
+    }
+
+    public StringProperty getTsubject(){
+        return tsubject;
+    }
+
+    public void setTscore(int score){
+        tscore.set(score);
+    }
+
+    public IntegerProperty getTscore(){
+        return tscore;
+    }
+
+    public void setTrank(int rank){
+        trank.set(rank);
+    }
+
+    public IntegerProperty getTrank(){
+        return trank;
     }
 }
