@@ -22,6 +22,29 @@ public class Mysql {
     public Mysql (Connection connection) {
         super();
         this.mConnect = connection;
+
+    }
+
+    public void createUserTable() {
+        try{
+            Statement sta = mConnect.createStatement();
+            String sql = "create table user(username varchar(45) not null, password varchar(45), isAdmin int(11), description varchar(300), groupID int(11) default -1, grade1 int(11) default 0, grade2 int(11) default 0, grade3 int(11) default 0, grade4 int(11) default 0, grade5 int(11) default 0, rank1 int(11) default 0, rank2 int(11) default 0, rank3 int(11) default 0, rank4 int(11) default 0, rank5 int(11) default 0, title1 varchar(45), time1 varchar(45), title2 varchar(45), time2 varchar(45), title3 varchar(45), time3 varchar(45), title4 varchar(45), time4 varchar(45));";
+            sta.executeUpdate(sql);
+        } catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+
+    public void createGroupTable() {
+        try{
+
+            Statement sta = mConnect.createStatement();
+            String sql = "create table group(id int(11) not null,username1 varchar(45),username2 varchar(45),username3 varchar(45),username4 varchar(45),username5 varchar(45),username6 varchar(45),username7 varchar(45),username8 varchar(45),username9 varchar(45), username10 varchar(45));";
+            sta.executeUpdate(sql);
+
+        } catch (SQLException e){
+            e.printStackTrace();
+        }
     }
 
     public int findIndex (String username, List<User> users) { // 已测试
@@ -646,10 +669,8 @@ public class Mysql {
 
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        mysql.appendUserIntoGroup("test",5);
-        mysql.appendUserIntoGroup("test1", 5);
-        mysql.appendUserIntoGroup("test2", 5);
-        mysql.appendUserIntoGroup("test3", 5);
+        mysql.createGroupTable();
+
     }
 }
 
