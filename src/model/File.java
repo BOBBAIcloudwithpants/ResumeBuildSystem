@@ -1,5 +1,6 @@
 package model;
 
+import GUI.GUIController.MainApp;
 import database.Mysql;
 import database.MysqlManager;
 
@@ -73,7 +74,7 @@ public class File {
             outcome += "\nGrade:\n";
             outcome += "Subject\tGrade\tRank\t\n";
             for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
-                outcome += "Subject\t";
+                outcome += MainApp.subjects.get(i)+ "\t";
                 outcome += user.getGrades().get(i) + "\t\t";
                 outcome += user.getRanks().get(i) + "\t\n";
             }
@@ -86,7 +87,7 @@ public class File {
 
             outcome += format("name", 10);
             for(int i = 1;i<=User.MAX_GRADE_NUMBER;i++){
-                outcome += format("s"+i, 10)+format("r"+i, 10);
+                outcome += format(MainApp.subjects.get(i-1), 10)+format("r"+i, 10);
             }
             outcome += "\n";
             for(User user : group.getUsers()){

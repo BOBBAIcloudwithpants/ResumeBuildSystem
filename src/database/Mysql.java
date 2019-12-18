@@ -669,7 +669,6 @@ public class Mysql {
 
     public static void main (String[] args) {
         Mysql mysql = new Mysql(MysqlManager.getConnection());
-        mysql.createGroupTable();
 
     }
 }

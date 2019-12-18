@@ -21,7 +21,7 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private static BorderPane rootLayout;
 
-    static List<String> subjects = new ArrayList<String>();
+    public static List<String> subjects = new ArrayList<String>();
 
     @Override
     public void start(Stage primaryStage) {

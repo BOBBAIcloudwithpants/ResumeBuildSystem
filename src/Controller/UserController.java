@@ -188,8 +188,7 @@ public class UserController {
     public static void main (String[] args) {
         UserController userController = new UserController();
 
-        userController.registerUser("wjs", "12345", 1, 5);
-
+        System.out.println(userController.getStudentFile("bob"));
     }
 
 
