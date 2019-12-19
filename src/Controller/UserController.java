@@ -16,16 +16,13 @@ public class UserController {
         mysql = new Mysql(MysqlManager.getConnection());
     }
 
-    public boolean findUserByName (String username) {
-        User user = mysql.getUserByUsername(username);
-        if (user != null) {
-            return true;
-        }
-        return false;
-    }
 
     public User getUserByUsername (String username) {
         return mysql.getUserByUsername(username);
+    }
+
+    public List<User> getAllUsers () {
+        return mysql.getAllUsers();
     }
 
     public boolean userLogin (String username, String password) {
@@ -53,7 +50,7 @@ public class UserController {
         }
 
         if (getGroupById(group) == null) {
-            return false;
+            return false; // 该组不存在
         }
         List<User> users = new ArrayList<User>();
         users.add(new User(username, password, isAdmin));
@@ -88,7 +85,6 @@ public class UserController {
                 outcome.add(user);
             }
         }
-
         return outcome;
     }
 
@@ -177,18 +173,28 @@ public class UserController {
         return mysql.createGroup(id);
     }
 
-    public String getStudentFile (String username) {
-        return new File(username).getFile();
+    public String getStudenttxtFile (String username) {
+        return new File(username).gettxtFile();
     }
 
-    public String getGroupFile (int id) {
-        return new File(id).getFile();
+    public String getGrouptxtFile (int id) {
+        return new File(id).gettxtFile();
+    }
+
+    public String getStudentmdFile (String username) {
+        return new File(username).getmdFile();
+    }
+
+    public String getGroupmdFile (int id) {
+        return new File(id).getmdFile();
     }
 
     public static void main (String[] args) {
         UserController userController = new UserController();
-
-        System.out.println(userController.getStudentFile("bob"));
+        List<User> users = userController.getStudentsByGroupID(1);
+        for (User user : users) {
+            System.out.println(user.getUsername());
+        }
     }
 
 
