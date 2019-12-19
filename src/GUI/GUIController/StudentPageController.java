@@ -100,7 +100,7 @@ public class StudentPageController implements Initializable {
             e.printStackTrace();
         }
         model.File text = new model.File(userName);
-        outFile.println(text.getFile());
+        outFile.println(text.gettxtFile());
         outFile.close();
     }
 

@@ -32,30 +32,32 @@ public class File {
         mysql = new Mysql(MysqlManager.getConnection());
     }
 
-    public String format(String target, int length){
-        for(int i = 0;i<length-target.length();i++){
-            target+=" ";
+    public String format (String target, int length) {
+        for (int i = 0; i < length - target.length(); i++) {
+            target += " ";
         }
 
         return target;
     }
 
-    public static String reverse1(String str) {
+    public static String reverse1 (String str) {
         return new StringBuilder(str).reverse().toString();
     }
-    public String transfer(int num){
-        if(num == 0){
+
+    public String transfer (int num) {
+        if (num == 0) {
             return String.valueOf(0);
         }
         String outcome = "";
-        while(num != 0){
-            outcome += String.valueOf(num%10);
+        while (num != 0) {
+            outcome += String.valueOf(num % 10);
             num /= 10;
         }
         outcome = reverse1(outcome);
         return outcome;
     }
-    public String getFile () {
+
+    public String gettxtFile () {
         outcome = "";
         if (id == -1) {
             User user = mysql.getUserByUsername(name);
@@ -74,7 +76,7 @@ public class File {
             outcome += "\nGrade:\n";
             outcome += "Subject\tGrade\tRank\t\n";
             for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
-                outcome += MainApp.subjects.get(i)+ "\t";
+                outcome += MainApp.subjects.get(i) + "\t";
                 outcome += user.getGrades().get(i) + "\t\t";
                 outcome += user.getRanks().get(i) + "\t\n";
             }
@@ -86,16 +88,70 @@ public class File {
             outcome += "Students' Grade:\n";
 
             outcome += format("name", 10);
-            for(int i = 1;i<=User.MAX_GRADE_NUMBER;i++){
-                outcome += format(MainApp.subjects.get(i-1), 10)+format("r"+i, 10);
+            for (int i = 1; i <= User.MAX_GRADE_NUMBER; i++) {
+                outcome += format(MainApp.subjects.get(i - 1), 10) + format("r" + i, 10);
             }
             outcome += "\n";
-            for(User user : group.getUsers()){
-                outcome += format(user.getUsername(),10) ;
-                for(int i = 0;i<User.MAX_GRADE_NUMBER;i++){
-                    outcome += format(transfer(user.getGrades().get(i)), 10) + format(transfer(user.getRanks().get(i)),10);
+            for (User user : group.getUsers()) {
+                outcome += format(user.getUsername(), 10);
+                for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
+                    outcome += format(transfer(user.getGrades().get(i)), 10) + format(transfer(user.getRanks().get(i)), 10);
                 }
                 outcome += "\n";
+            }
+        }
+        return outcome;
+    }
+
+    public String getmdFile () {
+        outcome = "";
+        if (id == -1) {
+            User user = mysql.getUserByUsername(name);
+            outcome += "# Student Name:\t" + name + "<br />";
+            if (user.getGroupID() != -1) {
+                outcome += "# Student Group:\t" + user.getGroupID() + "<br /><br />";
+            }
+            outcome += "# Description:<br />" + user.getDescription() + "<br /><br />";
+            outcome += "Award:<br />";
+            outcome += "| Date | Title|<br />";
+            outcome += "| - | - |<br />";
+            for (Award a : user.getAwards()) {
+                outcome += "| "+a.getTime() + " | " + a.getTitle() + " |<br />";
+            }
+            outcome += "<br />";
+
+            outcome += "<br />Grade:<br />";
+            outcome += "| Subject | Grade | Rank |<br />";
+            outcome += "| - | - | - |<br />";
+            for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
+                outcome += "| "+MainApp.subjects.get(i) + " | ";
+                outcome += user.getGrades().get(i) + "| ";
+                outcome += user.getRanks().get(i) + "| <br />";
+            }
+        } else {
+            Group group = mysql.getGroupById(id);
+            outcome += "Group ID:\t" + id + "<br /><br />";
+
+
+            outcome += "Students' Grade:<br />";
+
+            outcome += "| ";
+            outcome += format("name", 10);
+            for (int i = 1; i <= User.MAX_GRADE_NUMBER; i++) {
+                outcome += " | ";
+                outcome += format(MainApp.subjects.get(i - 1), 10) + "| " + format("rank" + i, 10);
+            }
+            outcome += " | <br />";
+            outcome += "| - | - | - | - | - | - | - | - | - | - | - |<br />";
+            for (User user : group.getUsers()) {
+                outcome += "| ";
+                outcome += format(user.getUsername(), 10);
+
+                for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
+                    outcome += " | ";
+                    outcome += format(transfer(user.getGrades().get(i)), 10) +" | "+ format(transfer(user.getRanks().get(i)), 10);
+                }
+                outcome += " |<br />";
             }
         }
         return outcome;

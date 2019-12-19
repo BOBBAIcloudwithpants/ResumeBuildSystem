@@ -173,12 +173,20 @@ public class UserController {
         return mysql.createGroup(id);
     }
 
-    public String getStudentFile (String username) {
-        return new File(username).getFile();
+    public String getStudenttxtFile (String username) {
+        return new File(username).gettxtFile();
     }
 
-    public String getGroupFile (int id) {
-        return new File(id).getFile();
+    public String getGrouptxtFile (int id) {
+        return new File(id).gettxtFile();
+    }
+
+    public String getStudentmdFile (String username) {
+        return new File(username).getmdFile();
+    }
+
+    public String getGroupmdFile (int id) {
+        return new File(id).getmdFile();
     }
 
     public static void main (String[] args) {
