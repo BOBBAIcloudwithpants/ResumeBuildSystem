@@ -18,6 +18,9 @@ import javafx.collections.ObservableList;
 import model.Award;
 import model.User;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
@@ -73,9 +76,21 @@ public class TeacherPageController {
     private final ObservableList<PieChart.Data> chartData = FXCollections.observableArrayList();
     private int groupID;
     private int currentSubjectID;
+    private String teacherName;
 
     //根据科目更新tableView
-    public void reset(String teacherName) {
+    public void reset() {
+        try {
+            Socket socket = new Socket("localhost",1056);
+            BufferedReader input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+            while (teacherName==null) {
+                teacherName = input.readLine();
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
         currentSubjectID = 0;
         UserController controller = new UserController();
         //get all students
@@ -96,9 +111,10 @@ public class TeacherPageController {
 
     //根据 groupID 和科目更新成绩表格
     private void setScoreTable(int groupID, int subjectID) {
+        currentSubjectID = subjectID;
         scoreData.clear();
         UserController controller = new UserController();
-        List<User> students =  controller.getStudentsByGroupID(groupID);
+        List<User> students =  controller.getAllStudents();
         for (int i =0; i< students.size();i++) {
             User student = students.get(i);
             String studentName = student.getUsername();
@@ -114,16 +130,12 @@ public class TeacherPageController {
     void editScore(ActionEvent event) {
         studentScoreTable.setEditable(true);
         scoreColumn.setCellFactory(TextFieldTableCell.forTableColumn());
-        /*scoreColumn.setOnEditCommit(
-                new EventHandler<TableColumn.CellEditEvent<ScoreInforForTeacher, String>>() {
-                    @Override
-                    public void handle(TableColumn.CellEditEvent<ScoreInforForTeacher, String> t) {
-                        ((ScoreInforForTeacher) t.getTableView().getItems().get(
-                                t.getTablePosition().getRow())
-                        ).setScore(Integer.parseInt(t.getNewValue()));
-                    }
-                }
-        );*/
+
+        String info="双击表格编辑成绩\n输入每名学生的成绩后，按下回车确认\n完成输入后点击提交修改";
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, info, new ButtonType("确定", ButtonBar.ButtonData.YES));
+        alert.setHeaderText(null);
+        alert.setTitle("修改成绩");
+        alert.show();
     }
 
 
@@ -134,9 +146,17 @@ public class TeacherPageController {
         for(int i = 0; i < scoreData.size(); i++){
             String username = scoreData.get(i).getStudentName().getValue();
             int grade = Integer.parseInt(scoreData.get(i).getScore().getValue());
-            usernameText.setText(username+ " " + grade);
-            controller.appendGradeOfStudent(username, currentSubjectID, grade);
+            controller.appendGradeOfStudent(username, currentSubjectID + 1, grade);
         }
+
+        String info="修改成功";
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, info, new ButtonType("确定", ButtonBar.ButtonData.YES));
+        alert.setHeaderText(null);
+        alert.setTitle("修改成绩");
+        alert.show();
+
+        setScoreTable(groupID, currentSubjectID);
+        setPieChart();
     }
 
     //处理科目选择的逻辑
@@ -198,10 +218,10 @@ public class TeacherPageController {
             }
         }
         for (int i = 0; i < 5; i++) {
-            if (count[i] >= 0) {
+            if (count[i] > 0) {
                 String interval;
                 if (i == 0) {
-                    interval = "0-60";
+                    interval = "0-59";
                 }
                 else if(i < 4) {
                     interval = (60 + 10 * (i - 1)) + "-"+ (69 + 10 * (i - 1));

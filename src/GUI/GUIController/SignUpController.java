@@ -13,6 +13,9 @@ import javafx.scene.control.PasswordField;
 
 import Controller.UserController.*;
 
+import java.io.PrintWriter;
+import java.net.Socket;
+
 public class SignUpController {
 
     @FXML
@@ -42,6 +45,8 @@ public class SignUpController {
     @FXML
     private Text errmsg;
 
+    private Socket socket = null;
+    private PrintWriter output = null;
 
     @FXML
     void signUp(ActionEvent event) {
@@ -81,10 +86,28 @@ public class SignUpController {
         }
         else {
             if(isAdmin == 1){
-                MainApp.gotoTeacherPage(username.getText());
+                try {
+                    socket = new Socket("localhost",1056);
+                    output = new PrintWriter(socket.getOutputStream());
+                    output.println(username.getText());
+                    output.flush();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+                MainApp.gotoTeacherPage();
             }
             else{
-                MainApp.gotoStudentPage(username.getText());
+                try {
+                    socket = new Socket("localhost",1056);
+                    output = new PrintWriter(socket.getOutputStream());
+                    output.println(username.getText());
+                    output.flush();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+                MainApp.gotoStudentPage();
             }
         }
     }

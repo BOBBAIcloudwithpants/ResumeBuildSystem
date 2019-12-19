@@ -6,11 +6,11 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GUIController.MenuPageController">
    <children>
-      <GridPane layoutX="224.0" layoutY="157.0" prefHeight="85.0" prefWidth="151.0">
+      <GridPane alignment="CENTER" layoutX="222.0" layoutY="113.0" prefHeight="174.0" prefWidth="157.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -20,9 +20,12 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="signInButton" mnemonicParsing="false" onAction="#signIn" prefHeight="23.0" prefWidth="159.0" text="Sign in" GridPane.rowIndex="1" />
-            <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUp" prefHeight="23.0" prefWidth="155.0" text="Sign up" GridPane.rowIndex="2" />
-            <Label prefHeight="15.0" prefWidth="150.0" text="Resume Build System" />
+            <Button fx:id="signInButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#signIn" prefHeight="23.0" prefWidth="155.0" style="-fx-background-color: #bee3de; -fx-border-color: #1a524d; -fx-border-radius: 30; -fx-background-radius: 30;" text="登录" textFill="#1a524d" GridPane.rowIndex="1" />
+            <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUp" prefHeight="23.0" prefWidth="155.0" style="-fx-background-color: #bee3de; -fx-background-radius: 30; -fx-border-color: #1a524d; -fx-border-radius: 30;" text="注册" GridPane.rowIndex="2" />
+            <Label alignment="CENTER" prefHeight="15.0" prefWidth="344.0" style="-fx-font-weight: bold;" text="简历生成小助手" textAlignment="CENTER" textFill="#17877e">
+               <font>
+                  <Font size="18.0" />
+               </font></Label>
          </children>
       </GridPane>
    </children>

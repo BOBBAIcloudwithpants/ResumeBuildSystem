@@ -99,7 +99,7 @@ public class MainApp extends Application {
         }
     }
 
-    static void gotoStudentPage(String username) {
+    static void gotoStudentPage() {
         try {
             // Load student page
             FXMLLoader loader = new FXMLLoader();
@@ -116,7 +116,7 @@ public class MainApp extends Application {
 
     }
 
-    static void gotoTeacherPage(String username) {
+    static void gotoTeacherPage() {
         try {
             // Load student page
             FXMLLoader loader = new FXMLLoader();
@@ -124,7 +124,7 @@ public class MainApp extends Application {
             AnchorPane teacherPage = (AnchorPane) loader.load();
 
             TeacherPageController controller = loader.getController();
-            controller.reset(username);
+            controller.reset();
 
             // Set student page into the center of root layout
             rootLayout.setCenter(teacherPage);

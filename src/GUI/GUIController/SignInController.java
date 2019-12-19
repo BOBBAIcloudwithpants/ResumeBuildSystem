@@ -37,8 +37,8 @@ public class SignInController implements Initializable{
     @FXML
     private Text tips;
 
-    Socket socket = null;
-    PrintWriter output = null;
+    private Socket socket = null;
+    private PrintWriter output = null;
 
     @FXML
     void ToMain(ActionEvent event) {
@@ -51,7 +51,16 @@ public class SignInController implements Initializable{
         if(usercontroller.userLogin(UserName, Password)){
 
             if(usercontroller.isAdmin(UserName)){
-                MainApp.gotoTeacherPage(UserName);
+                try {
+                    socket = new Socket("localhost",1056);
+                    output = new PrintWriter(socket.getOutputStream());
+                    output.println(UserName);
+                    output.flush();
+                }
+                catch (Exception e) {
+                    e.printStackTrace();
+                }
+                MainApp.gotoTeacherPage();
             }
             else{
                 try {
@@ -63,7 +72,7 @@ public class SignInController implements Initializable{
                 catch (Exception e) {
                     e.printStackTrace();
                 }
-                MainApp.gotoStudentPage(UserName);
+                MainApp.gotoStudentPage();
             }
         }
         else{
