@@ -43,17 +43,34 @@ idea项目如何在eclipse中打开可以参考网上的博客。（如果打不
 - class
 - isAdmin
 
-#### 接口
+#### 全部接口
 
 ##### User
-1. 前端：用户登录请求：     
-   服务端：     
-   后台：1. 判断用户是否在数据库中的接口：bool findUserByName(String username) 在数据库中则返回true，没有则返回false     
-        2. 用户登陆：bool userLogin(String username, String password) 登陆成功则返回true，失败则返回false
+| 序号 | 功能                             | 函数声明                                                               | 解释                                                              |
+| ---- | -------------------------------- | ---------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| 1    | 判断用户是否在数据库中           | User getUserByUsername(String username)                                | 该用户存在则返回User实体，不存在则返回null                        |
+| 2    | 用户登陆                         | boolean userLogin(String username, String password)                    | 登陆成功则返回true，失败则返回false                               |
+| 3    | 用户根据用户名和组号注册         | boolean registerUser(String username, String password, int isAdmin)    | 注册成功则返回true，没有则返回false                               |
+| 4    | 判断用户是否为管理员             | boolean isAdmin (String username)                                      | 该用户不存在或者不是管理员则返回false，否则返回true               |
+| 5    | 将用户加入某个组                 | boolean appendUserIntoGroup (String username, int id)                  | 加入成功则返回true，没有则返回false                               |
+| 6    | 根据用户姓名和科目查询成绩       | int getGradeByUsernameAndSubject (String username, int id)             | 返回成绩                                                          |
+| 7    | 根据用户姓名查询个人描述         | String getDescriptionByUsername (String username)                      | 返回描述                                                          |
+| 8    | 获取全部学生                     | List<User> getAllStudents ()                                           | 获取全部学生列表                                                  |
+| 9    | 获取某一个组中的全部学生列表     | List<User> getStudentsByGroupID (int groupID)                          | 获取组中全部学生的列表                                            |
+| 10   | 添加学生某门课的成绩             | boolean appendGradeOfStudent (String username, int id, int grade)      | **科目索引从1开始**, 添加成功返回true, 失败返回false              |
+| 11   | 为学生添加描述                   | boolean setDescriptionByUsername (String username, String description) | 传入学生姓名，若该用户不为学生或者不存在则返回false, 否则返回true |
+| 12   | 根据学生姓名和奖项名获取获奖时间 | String getAwardtimeByName (String username, String awardname)          | 根据学生姓名和奖项名获取获奖时间                                  |
+| 13   | 为学生设置奖项                   | boolean setAwardsByUsername (String username, List<Award> awards)      | 设置成功为true, 否则为false                                       |
+| 14   | 重置学生奖项并设置               | boolean resetAwardsByUsername (String username, List<Award> awards)    | 传入学生姓名和重置后的奖项, 成功为true, 否则为false               |
+| 15   | 获取学生的简历文档               | String getStudentFile (String username)                                | 传入学生姓名, 获取简历字符串                                      |
+##### Group
+| 序号 | 功能                | 函数声明                                            | 解释                                   |
+| ---- | ------------------- | --------------------------------------------------- | -------------------------------------- |
+| 1    | 根据id获取group信息 | Group getGroupById (String username, int id)        | 传入id, 要验证                         |
+| 2    | 根据学生姓名        | boolean appendUserInGroup (String username, int id) | 传入学生姓名和组号，该学生和组需要存在 |
+|      |                     |                                                     |                                        |
 
-2. 前端：用户注册请求：     
-   服务端：     
-   后台：1. 注册用户并写入数据库：bool registerUser(String username, String password, int isAdmin) 注册成功则返回true，没有则返回false
+
 
 ##### Grade
 在表结构中有5个字段，用于存放成绩。未录入的成绩默认为0
