@@ -84,14 +84,14 @@ public class StudentPageController implements Initializable {
 
     //生成简历文件
     @FXML
-    void createFile(ActionEvent event) {
+    void createtxtFile(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("请选择文件保存位置");
         File directory = null;
         while(directory == null){
             directory = chooser.showDialog(null);
         }
-        File file = new File(directory+"/"+"Resume.txt");
+        File file = new File(directory+"/"+userName+"Resume.txt");
         PrintWriter outFile = null;
         try{
             outFile = new PrintWriter(file);
@@ -104,6 +104,25 @@ public class StudentPageController implements Initializable {
         outFile.close();
     }
 
+    void createmdFile(ActionEvent event) {
+        DirectoryChooser chooser = new DirectoryChooser();
+        chooser.setTitle("请选择文件保存位置");
+        File directory = null;
+        while(directory == null){
+            directory = chooser.showDialog(null);
+        }
+        File file = new File(directory+"/"+userName+"Resume.md");
+        PrintWriter outFile = null;
+        try{
+            outFile = new PrintWriter(file);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+        model.File text = new model.File(userName);
+        outFile.println(text.getmdFile());
+        outFile.close();
+    }
     //提交个人简介和获奖记录
     @FXML
     void submitdescriptionandaward(ActionEvent event) {

@@ -30,6 +30,7 @@
         <Text layoutX="347.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="个人简介：" />
         <TextArea fx:id="description" layoutX="347.0" layoutY="241.0" prefHeight="118.0" prefWidth="200.0" wrapText="true" />
         <Button fx:id="submit" layoutX="424.0" layoutY="214.0" mnemonicParsing="false" onAction="#submitdescriptionandaward" text="提交奖项和个人简介" />
-      <Button fx:id="createFileButton" layoutX="186.0" layoutY="25.0" mnemonicParsing="false" onAction="#createFile" text="生成个人简历文件" />
+      <Button fx:id="createtxtFileButton" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" onAction="#createtxtFile" prefHeight="23.0" prefWidth="135.0" text="生成个人简历文件.txt" />
+      <Button fx:id="createmdFileButton" layoutX="163.0" layoutY="35.0" mnemonicParsing="false" onAction="#createtxtFile" prefHeight="23.0" prefWidth="135.0" text="生成个人简历文件.md" />
     </children>
 </AnchorPane>
