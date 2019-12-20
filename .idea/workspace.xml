@@ -2,30 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/57c9b920-43ff-46d7-94f5-7c4903a051c0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/57c9b920-43ff-46d7-94f5-7c4903a051c0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/Controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/AwardInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/AwardInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/RootLayoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/RootLayoutController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInforForTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInforForTeacher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInformation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignInController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignUpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/TeacherPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/TeacherPageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/MenuPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/MenuPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/RootLayout.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/SignUpController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/SignUpController.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/TeacherPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/TeacherPageController.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/database/Mysql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/database/Mysql.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/model/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/model/File.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/File.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,8 +164,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainApp" />
-        <item itemvalue="Application.Server" />
         <item itemvalue="Application.Mysql" />
+        <item itemvalue="Application.Server" />
         <item itemvalue="Application.UserController" />
       </list>
     </recent_temporary>
@@ -197,12 +175,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:jdbc:mysql://39.107.142.87/test?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -240,6 +213,7 @@
       <workItem from="1576721179747" duration="46000" />
       <workItem from="1576743485124" duration="3489000" />
       <workItem from="1576754337908" duration="2702000" />
+      <workItem from="1576845827443" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能">
       <created>1575981035607</created>
@@ -255,7 +229,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575981236382</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="增加修改按键，修改前后提示；修复生成md文件bug">
+      <created>1576845503491</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576845503491</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -273,7 +254,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="完成studentpage的创建文件（已测试），修改并提交awardtable和description（未测试）功能" />
     <MESSAGE value="修改AwardInformation中toAward函数；完成studentPageController提交奖项功能" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改AwardInformation中toAward函数；完成studentPageController提交奖项功能" />
+    <MESSAGE value="增加修改按键，修改前后提示；修复生成md文件bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加修改按键，修改前后提示；修复生成md文件bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="394" y="111" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1576585627108">
@@ -284,14 +266,18 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1326.706@0.0.1326.706" timestamp="1576844727109" />
+    <state x="290" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1576846594515">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="290" y="45" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1326.706@0.0.1326.706" timestamp="1576846594515" />
     <state x="394" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576585637682">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="394" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1326.706@0.0.1326.706" timestamp="1576585637682" />
-    <state x="434" y="0" key="CommitChangelistDialog2" timestamp="1576586336716">
+    <state x="434" y="0" key="CommitChangelistDialog2" timestamp="1576845500318">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="434" y="0" key="CommitChangelistDialog2/0.0.1326.706@0.0.1326.706" timestamp="1576586336716" />
+    <state x="434" y="0" key="CommitChangelistDialog2/0.0.1326.706@0.0.1326.706" timestamp="1576845500318" />
     <state width="242" height="189" key="DatabaseViewActions_Filter" timestamp="1575990883747">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -300,22 +286,22 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="126" y="53" key="DiffContextDialog/0.0.1326.706@0.0.1326.706" timestamp="1576843750492" />
-    <state width="1283" height="161" key="GridCell.Tab.0.bottom" timestamp="1576845139009">
+    <state width="1283" height="161" key="GridCell.Tab.0.bottom" timestamp="1576847306839">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="161" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
-    <state width="1283" height="161" key="GridCell.Tab.0.center" timestamp="1576845139009">
+    <state width="1283" height="161" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1576847306839" />
+    <state width="1283" height="161" key="GridCell.Tab.0.center" timestamp="1576847306839">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="161" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
-    <state width="1283" height="161" key="GridCell.Tab.0.left" timestamp="1576845139009">
+    <state width="1283" height="161" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1576847306839" />
+    <state width="1283" height="161" key="GridCell.Tab.0.left" timestamp="1576847306839">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="161" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
-    <state width="1283" height="161" key="GridCell.Tab.0.right" timestamp="1576845139009">
+    <state width="1283" height="161" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1576847306839" />
+    <state width="1283" height="161" key="GridCell.Tab.0.right" timestamp="1576847306839">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="161" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
+    <state width="1283" height="161" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1576847306839" />
     <state width="1283" height="214" key="GridCell.Tab.1.bottom" timestamp="1576585139489">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -340,10 +326,10 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="144" y="0" key="SettingsEditor/0.0.1326.706@0.0.1326.706" timestamp="1576025811280" />
-    <state x="256" y="89" key="Vcs.Push.Dialog.v2" timestamp="1576066789473">
+    <state x="256" y="89" key="Vcs.Push.Dialog.v2" timestamp="1576845526778">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="256" y="89" key="Vcs.Push.Dialog.v2/0.0.1326.706@0.0.1326.706" timestamp="1576066789473" />
+    <state x="256" y="89" key="Vcs.Push.Dialog.v2/0.0.1326.706@0.0.1326.706" timestamp="1576845526778" />
     <state x="244" y="11" key="com.intellij.database.dbimport.ImportDialog" timestamp="1576027298153">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -360,14 +346,14 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="540" y="106" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1326.706@0.0.1326.706" timestamp="1576582822804" />
-    <state x="362" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1576582807826">
+    <state x="362" y="181" key="com.intellij.ide.util.TipDialog" timestamp="1576845829290">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1576582807826" />
-    <state x="312" y="157" key="git4idea.merge.GitPullDialog" timestamp="1576843802241">
+    <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1576845829290" />
+    <state x="312" y="157" key="git4idea.merge.GitPullDialog" timestamp="1576846602106">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="312" y="157" key="git4idea.merge.GitPullDialog/0.0.1326.706@0.0.1326.706" timestamp="1576843802241" />
+    <state x="312" y="157" key="git4idea.merge.GitPullDialog/0.0.1326.706@0.0.1326.706" timestamp="1576846602106" />
     <state x="441" y="263" key="git4idea.ui.GitStashDialog" timestamp="1576843772471">
       <screen x="0" y="0" width="1326" height="706" />
     </state>

@@ -112,21 +112,21 @@ public class File {
                 outcome += "# Student Group:\t" + user.getGroupID() + "<br /><br />\n";
             }
             outcome += "# Description:<br />" + user.getDescription() + "<br /><br />\n";
-            outcome += "Award:<br />\n";
-            outcome += "| Date | Title|<br />\n";
-            outcome += "| - | - |<br />\n";
+            outcome += "Award:\n";
+            outcome += "| Date | Title|\n";
+            outcome += "| - | - |\n";
             for (Award a : user.getAwards()) {
-                outcome += "| "+a.getTime() + " | " + a.getTitle() + " |<br />\n";
+                outcome += "| "+a.getTime() + " | " + a.getTitle() + "|\n";
             }
-            outcome += "<br />\n";
+            //outcome += "<br />\n";
 
-            outcome += "<br />Grade:<br />\n";
-            outcome += "| Subject | Grade | Rank |<br />\n";
-            outcome += "| - | - | - |<br />\n";
+            outcome += "Grade:\n";
+            outcome += "| Subject | Grade | Rank |\n";
+            outcome += "| - | - | - |\n";
             for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
                 outcome += "| "+MainApp.subjects.get(i) + " | ";
                 outcome += user.getGrades().get(i) + "| ";
-                outcome += user.getRanks().get(i) + "| <br />\n";
+                outcome += user.getRanks().get(i) + "| \n";
             }
         } else {
             Group group = mysql.getGroupById(id);
