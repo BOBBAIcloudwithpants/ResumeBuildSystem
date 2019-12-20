@@ -34,32 +34,6 @@ public class Group {
 
     }
 
-    public void countRank() {
-
-        for (int i = 0; i < User.MAX_GRADE_NUMBER; i++) {
-            ranks[i].clear();
-        }
-        for(int i = 0;i<User.MAX_GRADE_NUMBER; i++){
-            int[] grade = new int[users.size()];
-
-            for(int j = 0;j<users.size();j++){
-                grade[j] = users.get(j).getGradeById(i);
-            }
-
-            sort(grade, ranks[i]);
-        }
-
-        for(int k = 0 ; k<users.size() ; k++){
-            for(int i = 0;i<User.MAX_GRADE_NUMBER;i++){
-                for(int j = 0;j<ranks[i].size();j++){
-                    if(ranks[i].get(j).equals(k)){
-                        users.get(k).getRanks().set(i, j);
-                    }
-                }
-            }
-        }
-
-    }
 
     public void sortSingleSubject(List<Integer> grades, int which) {
         int [] rank = new int[users.size()];
@@ -87,36 +61,8 @@ public class Group {
         }
     }
 
-    public void sort(int[] a, List<Integer> target){
-        int []temp = new int[a.length];
-        for(int i = 0;i<a.length;i++){
-            temp[i] = i;
-        }
-
-        for(int i = 0;i<a.length;i++){
-            for(int j = 0;j<a.length-1;j++){
-                if(a[j] < a[j+1]){
-                    int t = temp[j];
-                    temp[j] = temp[j+1];
-                    temp[j+1] = t;
-                }
-            }
-        }
 
 
-        for(int i = 0;i<temp.length;i++){
-            target.add(temp[i]);
-        }
-    }
-
-    public int findIndex (String username, List<User> users) { // 已测试
-        for (int i = 0; i < users.size(); i++) {
-            if (users.get(i).getUsername().equals(username)) {
-                return i;
-            }
-        }
-        return -1;
-    }
 
     public Group (int groupID) {
         users = new ArrayList<User>();
