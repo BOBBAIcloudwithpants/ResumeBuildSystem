@@ -72,6 +72,9 @@ public class StudentPageController implements Initializable {
     @FXML
     private Button createFileButton;
 
+    @FXML
+    private Button edit;
+
     private UserController usercontroller;
 
     private String userName;
@@ -82,7 +85,7 @@ public class StudentPageController implements Initializable {
 
     private final ObservableList<AwardInformation> awardData = FXCollections.observableArrayList();
 
-    //生成简历文件
+    //生成简历文件txt格式
     @FXML
     void createtxtFile(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
@@ -104,6 +107,8 @@ public class StudentPageController implements Initializable {
         outFile.close();
     }
 
+    //生成简历文件md格式
+    @FXML
     void createmdFile(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("请选择文件保存位置");
@@ -123,9 +128,27 @@ public class StudentPageController implements Initializable {
         outFile.println(text.getmdFile());
         outFile.close();
     }
+
+    //修改个人简介和获奖记录
+    @FXML
+    void editdescriptionandaward(ActionEvent event) {
+        String info="双击表格编辑个人简介及奖项\n输入后，按下回车确认\n完成输入后点击提交修改";
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, info, new ButtonType("确定", ButtonBar.ButtonData.YES));
+        alert.setHeaderText(null);
+        alert.setTitle("修改个人简介及奖项");
+        alert.show();
+        awardtable.setEditable(true);
+        awardtitle.setCellFactory(TextFieldTableCell.forTableColumn());
+        awardtime.setCellFactory(TextFieldTableCell.forTableColumn());
+    }
     //提交个人简介和获奖记录
     @FXML
     void submitdescriptionandaward(ActionEvent event) {
+        String info="修改成功";
+        Alert alert = new Alert(Alert.AlertType.INFORMATION, info, new ButtonType("确定", ButtonBar.ButtonData.YES));
+        alert.setHeaderText(null);
+        alert.setTitle("修改成绩");
+        alert.show();
         ArrayList<Award> newAwards = new ArrayList<Award>();
         for(int i = 0; i < awardData.size(); i++){
             newAwards.add(awardData.get(i).toAward());
@@ -244,9 +267,6 @@ public class StudentPageController implements Initializable {
         awardtitle.setCellValueFactory(awardData->awardData.getValue().getName());
         awardtime.setCellValueFactory(awardData->awardData.getValue().getTime());
         awardtable.setItems(awardData);
-        awardtable.setEditable(true);
-        awardtitle.setCellFactory(TextFieldTableCell.forTableColumn());
-        awardtime.setCellFactory(TextFieldTableCell.forTableColumn());
     }
 
     @Override

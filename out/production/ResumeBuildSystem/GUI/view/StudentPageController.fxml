@@ -26,10 +26,12 @@
                 <TableColumn fx:id="awardtime" prefWidth="113.5" text="获奖时间" />
             </columns>
         </TableView>
-        <PieChart fx:id="scorechart" layoutX="347.0" layoutY="15.0" prefHeight="195.0" prefWidth="200.0" />
+        <PieChart fx:id="scorechart" layoutX="347.0" layoutY="15.0" prefHeight="184.0" prefWidth="200.0" />
         <Text layoutX="347.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="个人简介：" />
         <TextArea fx:id="description" layoutX="347.0" layoutY="241.0" prefHeight="118.0" prefWidth="200.0" wrapText="true" />
         <Button fx:id="submit" layoutX="424.0" layoutY="214.0" mnemonicParsing="false" onAction="#submitdescriptionandaward" text="提交奖项和个人简介" />
-      <Button fx:id="createFileButton" layoutX="186.0" layoutY="25.0" mnemonicParsing="false" onAction="#createFile" text="生成个人简历文件" />
+      <Button fx:id="createtxtFileButton" layoutX="163.0" layoutY="10.0" mnemonicParsing="false" onAction="#createtxtFile" prefHeight="23.0" prefWidth="135.0" text="生成个人简历文件.txt" />
+      <Button fx:id="createmdFileButton" layoutX="163.0" layoutY="35.0" mnemonicParsing="false" onAction="#createmdFile" prefHeight="23.0" prefWidth="135.0" text="生成个人简历文件.md" />
+      <Button fx:id="edit" layoutX="424.0" layoutY="188.0" mnemonicParsing="false" onAction="#editdescriptionandaward" text="修改奖项和个人简介" />
     </children>
 </AnchorPane>

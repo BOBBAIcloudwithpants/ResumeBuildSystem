@@ -2,13 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e2a077-d6e7-4d37-90be-17fd21f1e174" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/57c9b920-43ff-46d7-94f5-7c4903a051c0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/57c9b920-43ff-46d7-94f5-7c4903a051c0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/Controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/Controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/AwardInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/AwardInformation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/RootLayoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/RootLayoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInforForTeacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInforForTeacher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInformation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/ScoreInformation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignInController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignUpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/SignUpController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/StudentPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/TeacherPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/GUIController/TeacherPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/MenuPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/MenuPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/RootLayout.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/RootLayout.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/SignUpController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/SignUpController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/StudentPageController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/TeacherPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/GUI/view/TeacherPageController.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/database/Mysql.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/database/Mysql.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ResumeBuildSystem/model/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ResumeBuildSystem/model/File.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/model/File.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/File.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI/view/StudentPageController.fxml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,73 +43,27 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://39.107.142.87/test?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://39.107.142.87/test?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="jdbc:mysql://39.107.142.87/test?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="test: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
     <option name="isMigrated" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2520">
-              <caret line="189" column="5" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
-              <folding>
-                <element signature="e#513#514#0" expanded="true" />
-                <element signature="e#4997#4998#0" expanded="true" />
-                <element signature="e#5042#5043#0" expanded="true" />
-                <element signature="e#5192#5193#0" expanded="true" />
-                <element signature="e#5245#5246#0" expanded="true" />
-                <element signature="e#5290#5291#0" expanded="true" />
-                <element signature="e#5337#5338#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
-              <folding>
-                <element signature="e#2466#2467#0" expanded="true" />
-                <element signature="e#2496#2497#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Award.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/File.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="137">
-              <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -122,18 +94,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/GUI/GUIController/MainApp.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/database/MysqlManager.java" />
-        <option value="$PROJECT_DIR$/src/database/Mysql.java" />
-        <option value="$PROJECT_DIR$/src/model/File.java" />
-        <option value="$PROJECT_DIR$/src/Controller/UserController.java" />
-      </list>
-    </option>
-  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -141,67 +101,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
-  </component>
   <component name="ProjectId" id="1UeLZHGpEH6AjcoKHTAW0YP2ahQ" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="database" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="GUI" type="462c0819:PsiDirectoryNode" />
-              <item name="GUIController" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ResumeBuildSystem" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ResumeBuildSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -230,19 +130,7 @@
       <recent name="C:\Users\liuxi\IdeaProjects\ResumeBuildSystem\src\GUI\GUIController" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.UserController">
+  <component name="RunManager" selected="Application.MainApp">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUIController.MainApp" />
       <module name="ResumeBuildSystem" />
@@ -297,10 +185,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UserController" />
         <item itemvalue="Application.MainApp" />
         <item itemvalue="Application.Server" />
         <item itemvalue="Application.Mysql" />
+        <item itemvalue="Application.UserController" />
       </list>
     </recent_temporary>
   </component>
@@ -313,11 +201,6 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:jdbc:mysql://39.107.142.87/test?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:jdbc:mysql://39.107.142.87/test?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;useLegacyDatetimeCode=false&amp;serverTimezone=Asia/Shanghai&amp;allowPublicKeyRetrieval=true" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@7cf4a99f" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -375,9 +258,6 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7455000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -386,76 +266,6 @@
       <are-packages-shown value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.14041515" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45787546" weight="0.3132653" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48988286" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49915683" weight="0.32990867" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.6355311" weight="0.26122448" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36446887" side_tool="true" weight="0.26122448" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.46703297" weight="0.3255102" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.16178267" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32967034" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14041515" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Learn" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.45787546" weight="0.3132653" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48988286" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49915683" weight="0.32990867" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.6355311" visible="true" weight="0.26122448" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.36446887" side_tool="true" visible="true" weight="0.26122448" />
-      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.46703297" weight="0.3255102" />
-      <window_info anchor="bottom" id="Database Changes" order="11" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.16178267" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32967034" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -470,10 +280,10 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="394" y="111" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1326.706@0.0.1326.706" timestamp="1576585627108" />
-    <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576583172715">
+    <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576844727109">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1326.706@0.0.1326.706" timestamp="1576583172715" />
+    <state x="256" y="15" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1326.706@0.0.1326.706" timestamp="1576844727109" />
     <state x="394" y="103" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1576585637682">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -486,22 +296,26 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state width="242" height="189" key="DatabaseViewActions_Filter/0.0.1326.706@0.0.1326.706" timestamp="1575990883747" />
-    <state width="1283" height="166" key="GridCell.Tab.0.bottom" timestamp="1576586027640">
+    <state x="126" y="53" key="DiffContextDialog" timestamp="1576843750492">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="166" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1576586027640" />
-    <state width="1283" height="166" key="GridCell.Tab.0.center" timestamp="1576586027640">
+    <state x="126" y="53" key="DiffContextDialog/0.0.1326.706@0.0.1326.706" timestamp="1576843750492" />
+    <state width="1283" height="161" key="GridCell.Tab.0.bottom" timestamp="1576845139009">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="166" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1576586027640" />
-    <state width="1283" height="166" key="GridCell.Tab.0.left" timestamp="1576586027640">
+    <state width="1283" height="161" key="GridCell.Tab.0.bottom/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
+    <state width="1283" height="161" key="GridCell.Tab.0.center" timestamp="1576845139009">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="166" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1576586027640" />
-    <state width="1283" height="166" key="GridCell.Tab.0.right" timestamp="1576586027640">
+    <state width="1283" height="161" key="GridCell.Tab.0.center/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
+    <state width="1283" height="161" key="GridCell.Tab.0.left" timestamp="1576845139009">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state width="1283" height="166" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1576586027640" />
+    <state width="1283" height="161" key="GridCell.Tab.0.left/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
+    <state width="1283" height="161" key="GridCell.Tab.0.right" timestamp="1576845139009">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state width="1283" height="161" key="GridCell.Tab.0.right/0.0.1326.706@0.0.1326.706" timestamp="1576845139009" />
     <state width="1283" height="214" key="GridCell.Tab.1.bottom" timestamp="1576585139489">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -550,10 +364,14 @@
       <screen x="0" y="0" width="1326" height="706" />
     </state>
     <state x="362" y="181" key="com.intellij.ide.util.TipDialog/0.0.1326.706@0.0.1326.706" timestamp="1576582807826" />
-    <state x="312" y="157" key="git4idea.merge.GitPullDialog" timestamp="1575981091173">
+    <state x="312" y="157" key="git4idea.merge.GitPullDialog" timestamp="1576843802241">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
-    <state x="312" y="157" key="git4idea.merge.GitPullDialog/0.0.1326.706@0.0.1326.706" timestamp="1575981091172" />
+    <state x="312" y="157" key="git4idea.merge.GitPullDialog/0.0.1326.706@0.0.1326.706" timestamp="1576843802241" />
+    <state x="441" y="263" key="git4idea.ui.GitStashDialog" timestamp="1576843772471">
+      <screen x="0" y="0" width="1326" height="706" />
+    </state>
+    <state x="441" y="263" key="git4idea.ui.GitStashDialog/0.0.1326.706@0.0.1326.706" timestamp="1576843772471" />
     <state x="441" y="219" key="git4idea.ui.GitUnstashDialog" timestamp="1575967968324">
       <screen x="0" y="0" width="1326" height="706" />
     </state>
@@ -573,14 +391,17 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/model/Group.java</url>
           <line>109</line>
-          <properties />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java</url>
-          <line>101</line>
-          <properties />
+          <line>104</line>
           <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/GUI/GUIController/StudentPageController.java</url>
+          <line>77</line>
+          <option name="timeStamp" value="27" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -589,160 +410,6 @@
     <SUITE FILE_PATH="coverage/ResumeBuildSystem$Mysql.ic" NAME="Mysql Coverage Results" MODIFIED="1575684547369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>database.*</FILTER>
     </SUITE>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="160" column="30" selection-start-line="160" selection-start-column="30" selection-end-line="160" selection-end-column="30" />
-          <folding>
-            <element signature="e#3813#3814#0" expanded="true" />
-            <element signature="e#3847#3848#0" expanded="true" />
-            <element signature="e#3889#3890#0" expanded="true" />
-            <element signature="e#3917#3918#0" expanded="true" />
-            <element signature="e#3969#3970#0" expanded="true" />
-            <element signature="e#4003#4004#0" expanded="true" />
-            <element signature="e#4065#4066#0" expanded="true" />
-            <element signature="e#4109#4110#0" expanded="true" />
-            <element signature="e#4147#4148#0" expanded="true" />
-            <element signature="e#4184#4185#0" expanded="true" />
-            <element signature="e#4212#4213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/ServerThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/MysqlManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
-          <folding>
-            <element signature="e#2466#2467#0" expanded="true" />
-            <element signature="e#2496#2497#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/database/Mysql.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="238" column="24" selection-start-line="238" selection-start-column="24" selection-end-line="238" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Award.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/GroupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/MainApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="46" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/SignInController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="394">
-            <caret line="50" selection-start-line="50" selection-end-line="50" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI/GUIController/SignUpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/mysql-connector-java-8.0.18.jar!/com/mysql/cj/jdbc/exceptions/SQLError.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="457" column="16" selection-start-line="457" selection-start-column="16" selection-end-line="457" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.3.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Objects.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="371" column="29" selection-start-line="371" selection-start-column="29" selection-end-line="371" selection-end-column="29" />
-          <folding>
-            <element signature="e#13877#13878#0" expanded="true" />
-            <element signature="e#13945#13946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/File.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="130" column="16" lean-forward="true" selection-start-line="130" selection-start-column="16" selection-end-line="130" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2520">
-          <caret line="189" column="5" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
-          <folding>
-            <element signature="e#513#514#0" expanded="true" />
-            <element signature="e#4997#4998#0" expanded="true" />
-            <element signature="e#5042#5043#0" expanded="true" />
-            <element signature="e#5192#5193#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5290#5291#0" expanded="true" />
-            <element signature="e#5337#5338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>

@@ -30,6 +30,7 @@
         </rowConstraints>
          <children>
             <TextField fx:id="username" promptText="用户名" />
+            <TextField fx:id="groupIDField" promptText="班级号码" GridPane.rowIndex="1" />
             <PasswordField fx:id="password" promptText="密码" GridPane.rowIndex="2" />
             <PasswordField fx:id="passwordConfirm" promptText="确认密码" GridPane.rowIndex="3" />
             <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#signUp" prefHeight="23.0" prefWidth="221.0" text="注册" GridPane.rowIndex="5" />
@@ -49,7 +50,6 @@
                   <Insets />
                </GridPane.margin>
             </HBox>
-            <TextField fx:id="groupIDField" promptText="班级号码" GridPane.rowIndex="1" />
             <Text fx:id="errmsg" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="148.00001525878906" GridPane.rowIndex="6" />
          </children>
       </GridPane>
