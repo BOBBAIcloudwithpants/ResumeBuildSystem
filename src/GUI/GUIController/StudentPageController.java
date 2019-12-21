@@ -70,7 +70,10 @@ public class StudentPageController implements Initializable {
     private Button submit;
 
     @FXML
-    private Button createFileButton;
+    private Button createtxtFileButton;
+
+    @FXML
+    private Button createmdFileButton;
 
     @FXML
     private Button edit;
@@ -87,7 +90,7 @@ public class StudentPageController implements Initializable {
 
     //生成简历文件txt格式
     @FXML
-    void createtxtFile(ActionEvent event) {
+    public void createtxtFile(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("请选择文件保存位置");
         File directory = null;
@@ -109,7 +112,7 @@ public class StudentPageController implements Initializable {
 
     //生成简历文件md格式
     @FXML
-    void createmdFile(ActionEvent event) {
+    public void createmdFile(ActionEvent event) {
         DirectoryChooser chooser = new DirectoryChooser();
         chooser.setTitle("请选择文件保存位置");
         File directory = null;
@@ -131,7 +134,7 @@ public class StudentPageController implements Initializable {
 
     //修改个人简介和获奖记录
     @FXML
-    void editdescriptionandaward(ActionEvent event) {
+    public void editdescriptionandaward(ActionEvent event) {
         String info="双击表格编辑个人简介及奖项\n输入后，按下回车确认\n完成输入后点击提交修改";
         Alert alert = new Alert(Alert.AlertType.INFORMATION, info, new ButtonType("确定", ButtonBar.ButtonData.YES));
         alert.setHeaderText(null);
@@ -143,7 +146,7 @@ public class StudentPageController implements Initializable {
     }
     //提交个人简介和获奖记录
     @FXML
-    void submitdescriptionandaward(ActionEvent event) {
+    public void submitdescriptionandaward(ActionEvent event) {
         String info="修改成功";
         Alert alert = new Alert(Alert.AlertType.INFORMATION, info, new ButtonType("确定", ButtonBar.ButtonData.YES));
         alert.setHeaderText(null);

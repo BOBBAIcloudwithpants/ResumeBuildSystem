@@ -7,9 +7,9 @@ import java.net.Socket;
 
 public class ServerThread extends Thread {
 
-    Socket socket = null;
-    BufferedReader input = null;
-    PrintWriter output = null;
+    private Socket socket = null;
+    private BufferedReader input = null;
+    private PrintWriter output = null;
 
     public ServerThread(Socket socket){
         this.socket = socket;

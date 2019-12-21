@@ -41,7 +41,7 @@ public class SignInController implements Initializable{
     private PrintWriter output = null;
 
     @FXML
-    void ToMain(ActionEvent event) {
+    public void ToMain(ActionEvent event) {
         usercontroller = new UserController();
 
         String UserName = username.getText();
@@ -81,7 +81,7 @@ public class SignInController implements Initializable{
     }
 
     @FXML
-    void ToRegister(ActionEvent event) {
+    public void ToRegister(ActionEvent event) {
         MainApp.gotoSignUpPage();
     }
 
