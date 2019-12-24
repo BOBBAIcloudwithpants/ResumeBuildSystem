@@ -110,29 +110,6 @@
 ![QXq9k6.png](https://s2.ax1x.com/2019/12/21/QXq9k6.png)
 ![QXqB3F.md.png](https://s2.ax1x.com/2019/12/21/QXqB3F.md.png)
 
-# model 
-## 学生：
-### 属性：
-- username
-- password
-- class(班级)
-- description(个人描述)
-- isAdmin
-- grade(成绩)
-- subject(科目)
-- rank(排名)  
-- awardName(奖项名称)
-- awardTime(获奖时间)  
-### 方法：
-
-### 老师
-
-#### 属性：
-- username
-- password
-- description
-- class
-- isAdmin
 
 ## 接口文档
 
